@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cool Group × Vertical OS — Инвестициялык сунуш 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#C9A84C;--gold-light:#E8C96A;--gold-dim:rgba(201,168,76,0.12);--gold-border:rgba(201,168,76,0.25);
+  --dark:#08090C;--dark2:#0D1018;--dark3:#131720;--dark4:#1A2030;
+  --text:#F0EDE6;--text-muted:rgba(240,237,230,0.58);--text-dim:rgba(240,237,230,0.28);
+  --green:#2D6A4F;--green-light:#52B788;--green-dim:rgba(82,183,136,0.12);
+  --blue:#5B8DB8;--blue-dim:rgba(91,141,184,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden;}
+
+body::before{content:'';position:fixed;inset:0;
+  background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(201,168,76,0.013) 3px,rgba(201,168,76,0.013) 4px),
+  repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(201,168,76,0.013) 3px,rgba(201,168,76,0.013) 4px);
+  pointer-events:none;z-index:0;}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:200;background:rgba(8,9,12,0.93);backdrop-filter:blur(20px);border-bottom:1px solid rgba(201,168,76,0.1);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px;}
+.nav-brand{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:2px;}
+.nav-links{display:flex;gap:24px;}
+.nav-links a{font-family:'Syne',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);}
+.nav-cta{background:linear-gradient(135deg,var(--gold),#A8860A);color:var(--dark);font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:9px 20px;border-radius:8px;text-decoration:none;white-space:nowrap;}
+.float-cta{position:fixed;bottom:28px;right:28px;z-index:300;background:linear-gradient(135deg,var(--gold),#A8860A);color:var(--dark);font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:14px 24px;border-radius:12px;cursor:pointer;border:none;box-shadow:0 8px 32px rgba(201,168,76,0.4);transition:transform .2s,box-shadow .2s;}
+.float-cta:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(201,168,76,0.5);}
+
+/* LAYOUT */
+section{position:relative;z-index:1;}
+.container{max-width:1100px;margin:0 auto;padding:0 48px;}
+.sec{padding:96px 0;}
+.sec-sm{padding:64px 0;}
+
+/* TYPE */
+.eyebrow{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.eyebrow::before{content:'';width:28px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);}
+.display{font-family:'Playfair Display',serif;font-size:clamp(40px,5.5vw,72px);font-weight:900;line-height:1.05;letter-spacing:-1px;}
+.display em{font-style:italic;color:var(--gold-light);}
+.h1{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,52px);font-weight:700;line-height:1.1;}
+.h1 em{font-style:italic;color:var(--gold-light);}
+.h2{font-family:'Playfair Display',serif;font-size:clamp(22px,2.8vw,36px);font-weight:700;line-height:1.2;}
+.h2 em{font-style:italic;color:var(--gold-light);}
+.body-lg{font-size:17px;line-height:1.75;color:var(--text-muted);font-weight:300;}
+.body{font-size:14px;line-height:1.7;color:var(--text-muted);}
+.rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.2),transparent);margin:48px 0;}
+.badge{display:inline-flex;align-items:center;padding:4px 12px;border:1px solid var(--gold-border);border-radius:20px;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);background:var(--gold-dim);}
+.badge-green{border-color:rgba(82,183,136,0.3);color:var(--green-light);background:var(--green-dim);}
+.badge-blue{border-color:rgba(91,141,184,0.3);color:var(--blue);background:var(--blue-dim);}
+
+/* ═══ HERO ═══ */
+#hero{min-height:100vh;display:flex;align-items:center;overflow:hidden;}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;}
+.hero-grid{display:grid;grid-template-columns:1fr 380px;gap:72px;align-items:center;}
+.hero-logos{display:flex;align-items:center;gap:14px;margin-bottom:40px;}
+.logo-chip{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:12px;font-weight:800;}
+.logo-cg{background:linear-gradient(135deg,#1E2530,#2D3748);border:1px solid rgba(201,168,76,0.4);color:var(--gold);}
+.logo-vos{background:linear-gradient(135deg,#2D6A4F,#1a4030);color:#fff;}
+.logo-x{font-family:'Playfair Display',serif;font-size:18px;color:var(--text-dim);}
+.hero-meta{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.meta-card{background:rgba(255,255,255,0.03);border:1px solid rgba(201,168,76,0.12);border-radius:12px;padding:15px 17px;position:relative;overflow:hidden;}
+.meta-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--gold),transparent);}
+.meta-lbl{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-dim);font-family:'Syne',sans-serif;margin-bottom:5px;}
+.meta-val{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--gold-light);letter-spacing:1px;}
+
+/* Hero right panel */
+.hero-panel{display:flex;flex-direction:column;gap:10px;}
+.hpanel-card{background:var(--dark3);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:18px 20px;position:relative;overflow:hidden;}
+.hpanel-card.featured{border-color:rgba(201,168,76,0.3);background:linear-gradient(140deg,rgba(201,168,76,0.07),var(--dark3));}
+.hpanel-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+.hpanel-card.gold::before{background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.hpanel-card.green::before{background:linear-gradient(90deg,transparent,var(--green-light),transparent);}
+.hpanel-card.blue::before{background:linear-gradient(90deg,transparent,var(--blue),transparent);}
+.hp-lbl{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);margin-bottom:3px;}
+.hp-val{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;}
+.hp-sub{font-size:11px;color:var(--text-dim);margin-top:1px;}
+
+/* simultaneous badge */
+.sim-badge{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(82,183,136,0.08));border:1px solid rgba(201,168,76,0.3);border-radius:30px;padding:8px 18px;margin-bottom:24px;}
+.sim-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pulse 1.8s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.sim-text{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
+
+/* ═══ REVOLUTIONARY STATEMENT ═══ */
+#revolution{background:var(--dark2);}
+.rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:52px;}
+.rev-number{font-family:'Bebas Neue',sans-serif;font-size:clamp(80px,12vw,160px);color:rgba(201,168,76,0.06);line-height:1;position:absolute;top:-20px;left:-10px;pointer-events:none;letter-spacing:-4px;}
+.rev-stat{background:var(--dark3);border-radius:14px;padding:24px;border:1px solid rgba(255,255,255,0.05);position:relative;overflow:hidden;margin-bottom:12px;}
+.rev-stat::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;}
+.rs-gold::before{background:var(--gold);}
+.rs-green::before{background:var(--green-light);}
+.rs-blue::before{background:var(--blue);}
+.rs-num{font-family:'Bebas Neue',sans-serif;font-size:44px;letter-spacing:1px;line-height:1;}
+.rs-lbl{font-size:12px;color:var(--text-muted);margin-top:4px;}
+
+/* ═══ PRODUCTS (Toolor first, all simultaneous) ═══ */
+#products{background:var(--dark);}
+.products-hero{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:44px;}
+/* Toolor — featured large card spans full width conceptually */
+.prod-featured{grid-column:1/-1;background:linear-gradient(135deg,rgba(201,168,76,0.09),rgba(45,106,79,0.06),var(--dark3));border:1px solid rgba(201,168,76,0.32);border-radius:20px;padding:36px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+.prod-featured::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);}
+.prod-featured .flagship-tag{display:inline-flex;align-items:center;gap:7px;background:rgba(201,168,76,0.14);border:1px solid rgba(201,168,76,0.35);border-radius:20px;padding:5px 14px;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.prod-featured .flagship-tag::before{content:'★';font-size:10px;}
+.prod-title-lg{font-family:'Playfair Display',serif;font-size:clamp(22px,2.5vw,32px);font-weight:700;line-height:1.2;margin-bottom:12px;}
+.prod-title-lg em{font-style:italic;color:var(--gold-light);}
+.prod-price-lg{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold-light);letter-spacing:2px;margin-top:16px;}
+.prod-price-lg span{font-size:14px;color:var(--text-dim);font-family:'DM Sans',sans-serif;}
+
+/* supporting 2 cards */
+.prod-card{background:var(--dark3);border:1px solid rgba(255,255,255,0.06);border-radius:18px;padding:28px 24px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;}
+.prod-card:hover{transform:translateY(-5px);box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.prod-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+.prod-card.c-green::before{background:linear-gradient(90deg,transparent,var(--green-light),transparent);}
+.prod-card.c-blue::before{background:linear-gradient(90deg,transparent,var(--blue),transparent);}
+.prod-card.c-green{border-color:rgba(82,183,136,0.2);}
+.prod-card.c-blue{border-color:rgba(91,141,184,0.2);}
+.prod-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:22px;}
+.prod-name{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:8px;}
+.prod-desc{font-size:12.5px;color:var(--text-muted);line-height:1.55;margin-bottom:16px;}
+.prod-price{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--gold-light);letter-spacing:1px;}
+.prod-price span{font-size:11px;color:var(--text-dim);font-family:'DM Sans',sans-serif;}
+.pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;}
+.pill{font-size:9px;padding:3px 8px;border-radius:12px;background:rgba(255,255,255,0.04);color:var(--text-muted);border:1px solid rgba(255,255,255,0.07);font-family:'Syne',sans-serif;}
+.total-row{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,rgba(201,168,76,0.1),rgba(201,168,76,0.04));border:1px solid rgba(201,168,76,0.3);border-radius:14px;padding:22px 28px;margin-top:20px;}
+.total-row .lbl{font-family:'Syne',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
+.total-row .num{font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--gold-light);letter-spacing:2px;}
+.total-row .save{font-size:11px;color:var(--text-dim);margin-top:2px;}
+
+/* ═══ PARALLEL TIMELINE ═══ */
+#timeline{background:var(--dark2);}
+.gantt{margin-top:44px;position:relative;}
+.gantt-months{display:grid;grid-template-columns:180px repeat(5,1fr);gap:0;margin-bottom:8px;}
+.gm-label{font-family:'Syne',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);text-align:center;padding:6px 0;}
+.gantt-row{display:grid;grid-template-columns:180px repeat(5,1fr);gap:4px;margin-bottom:8px;align-items:center;}
+.gantt-label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--text-muted);text-align:right;padding-right:16px;}
+.gantt-bar{height:36px;border-radius:8px;display:flex;align-items:center;padding:0 14px;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;overflow:hidden;}
+.gantt-bar.gold{background:linear-gradient(90deg,rgba(201,168,76,0.7),rgba(201,168,76,0.4));color:var(--dark);}
+.gantt-bar.green{background:linear-gradient(90deg,rgba(82,183,136,0.55),rgba(82,183,136,0.3));color:var(--dark3);}
+.gantt-bar.blue{background:linear-gradient(90deg,rgba(91,141,184,0.55),rgba(91,141,184,0.3));color:var(--dark3);}
+.gantt-bar.qa{background:linear-gradient(90deg,rgba(255,255,255,0.12),rgba(255,255,255,0.06));color:var(--text-dim);}
+.gantt-bar .milestone{margin-left:auto;background:rgba(0,0,0,0.3);border-radius:4px;padding:2px 6px;font-size:8px;}
+/* span helpers */
+.span2{grid-column:span 2;}
+.span3{grid-column:span 3;}
+.span4{grid-column:span 4;}
+.span5{grid-column:span 5;}
+.col2{grid-column:2;}
+.col3{grid-column:3;}
+.col4{grid-column:4;}
+.col5{grid-column:5;}
+.col6{grid-column:6;}
+
+.parallel-note{margin-top:24px;background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.18);border-radius:12px;padding:18px 22px;display:flex;align-items:flex-start;gap:14px;}
+.pn-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.pn-text{font-size:13px;color:var(--text-muted);line-height:1.6;}
+.pn-text strong{color:var(--text);}
+
+/* ═══ PRODUCTS DEEP DIVE ═══ */
+.product-section{padding:80px 0;border-top:1px solid rgba(255,255,255,0.04);}
+.ps-header{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;}
+.ps-tag{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:30px;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;}
+.ps-tag.gold{background:rgba(201,168,76,0.12);color:var(--gold);border:1px solid rgba(201,168,76,0.3);}
+.ps-tag.green{background:rgba(82,183,136,0.1);color:var(--green-light);border:1px solid rgba(82,183,136,0.25);}
+.ps-tag.blue{background:rgba(91,141,184,0.1);color:var(--blue);border:1px solid rgba(91,141,184,0.25);}
+.ps-price{background:var(--dark3);border:1px solid rgba(201,168,76,0.2);border-radius:14px;padding:22px 26px;text-align:right;min-width:160px;}
+.ps-price .lbl{font-family:'Syne',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);margin-bottom:5px;}
+.ps-price .big{font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--gold-light);letter-spacing:2px;}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px;}
+.feat-item{background:var(--dark3);border-radius:10px;padding:16px 18px;border:1px solid rgba(255,255,255,0.05);}
+.fi-title{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.fi-desc{font-size:12px;color:var(--text-muted);line-height:1.5;}
+
+/* Kanban board */
+.kanban-demo{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:20px 0;}
+.k-col{background:var(--dark4);border-radius:10px;padding:12px 10px;border-top:2px solid var(--green-light);}
+.k-col-t{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;color:var(--green-light);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;text-align:center;}
+.k-card{background:var(--dark3);border-radius:6px;padding:7px 9px;margin-bottom:6px;font-size:10px;border:1px solid rgba(255,255,255,0.06);}
+.k-status{font-size:9px;font-weight:600;}
+
+/* Loyalty tiers */
+.tier-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0;}
+.tier-card{border-radius:12px;padding:16px 10px;text-align:center;border:1.5px solid;}
+.t-b{border-color:#CD7F32;background:rgba(205,127,50,0.08);}
+.t-s{border-color:#A8A9AD;background:rgba(168,169,173,0.07);}
+.t-g{border-color:var(--gold);background:rgba(201,168,76,0.08);}
+.t-p{border-color:var(--green-light);background:rgba(82,183,136,0.07);}
+.t-icon{font-size:20px;margin-bottom:6px;}
+.t-name{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;margin-bottom:3px;}
+.t-thresh{font-size:9.5px;color:var(--text-dim);}
+.t-pct{font-family:'Bebas Neue',sans-serif;font-size:22px;margin-top:5px;}
+
+/* PRD accordion */
+.prd-toggle{width:100%;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase;transition:background .2s,color .2s;margin-top:20px;}
+.prd-toggle:hover{background:rgba(201,168,76,0.05);color:var(--gold);}
+.prd-toggle.open{background:rgba(201,168,76,0.05);color:var(--gold);}
+.prd-toggle .arr{transition:transform .3s;}
+.prd-toggle.open .arr{transform:rotate(180deg);}
+.prd-body{display:none;padding:18px 0 4px;}
+.prd-body.open{display:block;}
+.req-table{width:100%;border-collapse:collapse;font-size:12px;}
+.req-table th{font-family:'Syne',sans-serif;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.06);}
+.req-table td{padding:9px 12px;border-bottom:1px solid rgba(255,255,255,0.04);color:var(--text-muted);line-height:1.4;}
+.req-table td:first-child{color:var(--text);font-weight:500;}
+.bh{background:rgba(220,60,60,0.14);color:#E07070;font-family:'Syne',sans-serif;font-size:8px;padding:2px 6px;border-radius:4px;font-weight:700;}
+.bm{background:rgba(200,140,40,0.14);color:#D4A040;font-family:'Syne',sans-serif;font-size:8px;padding:2px 6px;border-radius:4px;font-weight:700;}
+
+/* ═══ PAYMENT ═══ */
+#payment{background:var(--dark2);}
+.payment-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;}
+.pay-card{background:var(--dark3);border-radius:16px;padding:24px 20px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,0.06);}
+.pay-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);}
+.pay-card.final::after{background:var(--green-light);}
+.pay-n{font-family:'Bebas Neue',sans-serif;font-size:52px;color:rgba(201,168,76,0.1);line-height:1;margin-bottom:10px;}
+.pay-lbl{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.pay-lbl.g{color:var(--green-light);}
+.pay-trigger{font-size:12.5px;color:var(--text-muted);line-height:1.5;margin-bottom:14px;}
+.pay-amount{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold-light);letter-spacing:2px;}
+.pay-amount.g{color:var(--green-light);}
+
+/* ═══ SAAS ═══ */
+#saas{background:var(--dark);}
+.rev-hero{background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(45,106,79,0.06));border:1px solid rgba(201,168,76,0.18);border-radius:18px;padding:32px 38px;margin-top:40px;display:flex;gap:40px;align-items:center;}
+.rev-big{font-family:'Bebas Neue',sans-serif;font-size:80px;color:var(--gold-light);letter-spacing:2px;line-height:1;}
+.rev-big sub{font-size:32px;vertical-align:super;font-family:'Playfair Display',serif;}
+.rev-lbl{font-family:'Syne',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.rev-desc{font-size:13.5px;color:var(--text-muted);max-width:280px;line-height:1.6;}
+.rev-bars{display:flex;align-items:flex-end;gap:18px;padding-bottom:20px;}
+.rev-bar-wrap{display:flex;flex-direction:column;align-items:center;gap:6px;}
+.rev-bar{border-radius:6px 6px 0 0;width:36px;position:relative;}
+.rev-bar .rbv{font-family:'Syne',sans-serif;font-size:8px;font-weight:700;position:absolute;top:-18px;left:50%;transform:translateX(-50%);white-space:nowrap;color:var(--text-dim);}
+.rev-bar .rbl{font-size:9px;color:var(--text-dim);margin-top:6px;white-space:nowrap;}
+.rev-table{width:100%;border-collapse:collapse;margin-top:28px;}
+.rev-table th{font-family:'Syne',sans-serif;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.06);}
+.rev-table td{padding:13px 14px;font-size:13px;color:var(--text-muted);border-bottom:1px solid rgba(255,255,255,0.04);}
+.rev-table td:first-child{color:var(--text);font-weight:500;}
+.rev-table td.hl{color:var(--gold-light);font-family:'Syne',sans-serif;font-weight:700;}
+.rev-table tr.tr-tot td{background:rgba(201,168,76,0.06);border-top:1px solid rgba(201,168,76,0.2);}
+.mkt-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px;}
+.mkt-card{background:var(--dark3);border-radius:14px;padding:22px;border:1px solid rgba(255,255,255,0.05);}
+.mkt-stat{font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--text);margin:8px 0 4px;letter-spacing:1px;}
+
+/* ═══ EQUITY ═══ */
+#equity{background:var(--dark2);}
+.eq-layout{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:start;margin-top:44px;}
+.pie-wrap{position:relative;width:240px;height:240px;}
+.pie-wrap svg{transform:rotate(-90deg);}
+.pie-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
+.pn{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--gold-light);display:block;letter-spacing:2px;}
+.pl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);font-family:'Syne',sans-serif;}
+.eq-legend{margin-top:18px;display:flex;flex-direction:column;gap:9px;}
+.eq-item{display:flex;align-items:center;gap:11px;}
+.eq-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.eq-text{font-size:12.5px;color:var(--text-muted);flex:1;}
+.eq-pct{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;}
+.term-cards{display:flex;flex-direction:column;gap:13px;}
+.term-card{background:var(--dark3);border-radius:12px;padding:17px 19px;border-left:3px solid var(--gold);}
+.term-card.g{border-left-color:var(--green-light);}
+.term-card.b{border-left-color:var(--blue);}
+.term-card h4{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.term-card.g h4{color:var(--green-light);}
+.term-card.b h4{color:var(--blue);}
+.term-card p{font-size:12.5px;color:var(--text-muted);line-height:1.5;}
+.sep-note{padding:13px 16px;background:rgba(201,168,76,0.05);border-radius:10px;border:1px dashed rgba(201,168,76,0.2);font-size:12px;color:var(--text-muted);line-height:1.5;}
+
+/* ═══ WHY ═══ */
+#why{background:var(--dark);}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px;}
+.why-card{background:var(--dark3);border-radius:14px;padding:22px 20px;border:1px solid rgba(255,255,255,0.05);display:flex;gap:15px;align-items:flex-start;transition:border-color .2s,transform .2s;}
+.why-card:hover{border-color:rgba(201,168,76,0.2);transform:translateY(-3px);}
+.why-icon{width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.why-card h4{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.why-card p{font-size:12.5px;color:var(--text-muted);line-height:1.5;}
+.quote-block{background:linear-gradient(135deg,rgba(201,168,76,0.07),rgba(45,106,79,0.05));border:1px solid rgba(201,168,76,0.15);border-radius:16px;padding:26px 30px;margin-top:22px;position:relative;}
+.q-mark{font-family:'Playfair Display',serif;font-size:72px;line-height:.4;color:var(--gold);opacity:.2;position:absolute;top:18px;left:20px;}
+.q-text{font-family:'Playfair Display',serif;font-size:16px;font-style:italic;color:var(--text);line-height:1.65;padding-left:16px;position:relative;}
+.q-attr{margin-top:10px;font-size:11px;color:var(--gold);font-family:'Syne',sans-serif;letter-spacing:1px;text-transform:uppercase;padding-left:16px;}
+
+/* ═══ NEXT STEPS ═══ */
+#next{background:var(--dark2);}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px;}
+.step-card{background:var(--dark3);border-radius:14px;padding:26px 20px;border:1px solid rgba(255,255,255,0.06);text-align:center;position:relative;overflow:hidden;transition:transform .3s;}
+.step-card:hover{transform:translateY(-4px);}
+.step-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .3s;}
+.step-card:hover::after{opacity:1;}
+.step-n{font-family:'Bebas Neue',sans-serif;font-size:60px;color:rgba(201,168,76,0.1);line-height:1;margin-bottom:10px;}
+.step-card h4{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--text);margin-bottom:8px;}
+.step-card p{font-size:12px;color:var(--text-muted);line-height:1.55;}
+
+/* Team */
+#team{background:var(--dark);}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px;}
+.team-card{background:var(--dark3);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.05);}
+.team-role{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.team-name{font-size:13px;color:var(--text);font-weight:500;margin-bottom:5px;}
+.team-desc{font-size:11.5px;color:var(--text-muted);line-height:1.45;}
+
+/* Guarantee */
+.guar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px;}
+.guar-card{background:var(--dark3);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.04);text-align:center;}
+.guar-icon{font-size:20px;margin-bottom:7px;}
+.guar-title{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.guar-desc{font-size:11px;color:var(--text-muted);}
+
+/* CTA banner */
+.cta-banner{margin-top:36px;background:linear-gradient(135deg,#0f1a12,#111808);border:1px solid rgba(201,168,76,0.28);border-radius:18px;padding:32px 40px;display:flex;justify-content:space-between;align-items:center;gap:28px;position:relative;overflow:hidden;}
+.cta-banner::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,168,76,0.04),transparent);pointer-events:none;}
+.cta-banner h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;line-height:1.35;max-width:420px;}
+.cta-banner h3 em{font-style:italic;color:var(--gold-light);}
+.cta-right{display:flex;flex-direction:column;gap:10px;align-items:flex-end;}
+.cta-inv .lbl{font-family:'Syne',sans-serif;font-size:9px;color:var(--text-dim);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;text-align:right;}
+.cta-inv .val{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:2px;text-align:right;}
+.btn-primary{background:linear-gradient(135deg,var(--gold),#A8860A);color:var(--dark);font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:15px 30px;border-radius:10px;cursor:pointer;border:none;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 28px rgba(201,168,76,0.3);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(201,168,76,0.4);}
+
+/* comparison table */
+.comp-table{margin-top:28px;background:var(--dark3);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);}
+.comp-table .row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(255,255,255,0.04);}
+.comp-table .row:last-child{border-bottom:none;}
+.comp-table .col{padding:12px 20px;font-size:12.5px;}
+.comp-table .col-head{background:rgba(255,255,255,0.03);font-family:'Syne',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);padding:14px 20px;}
+.comp-table .col:nth-child(2){background:rgba(82,183,136,0.04);border-left:1px solid rgba(255,255,255,0.04);}
+.comp-neg{color:#E07070;font-weight:500;}
+.comp-pos{color:var(--green-light);font-weight:500;}
+
+/* ═══ ROI SECTION ═══ */
+#roi{background:var(--dark);}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px;}
+.pain-card{background:var(--dark3);border-radius:14px;padding:22px;border:1px solid rgba(255,255,255,0.05);position:relative;overflow:hidden;transition:transform .2s,border-color .2s;}
+.pain-card:hover{transform:translateY(-3px);border-color:rgba(201,168,76,0.2);}
+.pain-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(200,80,60,0.5),transparent);}
+.pain-icon{font-size:24px;margin-bottom:10px;}
+.pain-title{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--text);margin-bottom:6px;}
+.pain-desc{font-size:12.5px;color:var(--text-muted);line-height:1.55;}
+.pain-cost{display:inline-block;margin-top:10px;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;color:#E07070;background:rgba(200,80,60,0.1);border:1px solid rgba(200,80,60,0.25);border-radius:6px;padding:3px 9px;}
+
+.roi-transform{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:center;margin-top:36px;}
+.roi-before,.roi-after{background:var(--dark3);border-radius:16px;padding:26px;}
+.roi-before{border:1px solid rgba(200,80,60,0.2);}
+.roi-after{border:1px solid rgba(82,183,136,0.25);}
+.roi-arrow{display:flex;flex-direction:column;align-items:center;gap:6px;}
+.roi-arrow svg{color:var(--gold);}
+.roi-arrow span{font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--gold);letter-spacing:2px;}
+.roi-section-title{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;}
+.roi-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;font-size:12.5px;color:var(--text-muted);line-height:1.45;}
+.roi-item::before{font-size:14px;flex-shrink:0;margin-top:1px;}
+.roi-before .roi-item::before{content:'✗';color:#E07070;}
+.roi-after .roi-item::before{content:'✓';color:var(--green-light);}
+
+.roi-calc{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px;}
+.roi-num-card{background:linear-gradient(135deg,var(--dark3),var(--dark4));border-radius:14px;padding:22px 18px;border:1px solid rgba(201,168,76,0.15);text-align:center;}
+.roi-num-card.highlight{border-color:rgba(82,183,136,0.35);background:linear-gradient(135deg,rgba(82,183,136,0.07),var(--dark3));}
+.rn-lbl{font-family:'Syne',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px;}
+.rn-val{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:1px;line-height:1;}
+.rn-sub{font-size:11px;color:var(--text-dim);margin-top:5px;line-height:1.4;}
+
+.use-cases{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;}
+.use-case{background:var(--dark3);border-radius:10px;padding:16px 18px;border:1px solid rgba(255,255,255,0.05);}
+.uc-tag{display:inline-flex;align-items:center;gap:5px;font-family:'Syne',sans-serif;font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:5px;margin-bottom:8px;}
+.uc-tag.b2b{background:rgba(91,141,184,0.15);color:var(--blue);}
+.uc-tag.b2c{background:rgba(82,183,136,0.15);color:var(--green-light);}
+.uc-tag.ops{background:rgba(201,168,76,0.15);color:var(--gold);}
+.uc-tag.collab{background:rgba(124,111,205,0.15);color:#9B8FD4;}
+.uc-title{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--text);margin-bottom:5px;}
+.uc-desc{font-size:12px;color:var(--text-muted);line-height:1.5;}
+.uc-gain{font-size:11px;color:var(--green-light);margin-top:7px;font-weight:500;}
+
+footer{background:var(--dark);border-top:1px solid rgba(201,168,76,0.1);padding:28px 48px;display:flex;justify-content:space-between;align-items:center;}
+footer .f-brand{font-family:'Syne',sans-serif;font-size:11px;color:var(--text-dim);letter-spacing:2px;}
+footer .f-conf{font-size:10px;color:var(--text-dim);}
+
+@media(max-width:900px){
+  .hero-grid,.rev-grid,.eq-layout,.prod-featured,.feat-grid,.why-grid,.steps-grid{grid-template-columns:1fr;}
+  .products-hero,.team-grid,.mkt-grid,.guar-grid,.payment-grid{grid-template-columns:1fr 1fr;}
+  .tier-grid,.kanban-demo{grid-template-columns:1fr 1fr;}
+  .hero-meta{grid-template-columns:1fr 1fr;}
+  .nav-links{display:none;}
+}
+
+/* ═══════════════════════════════════
+   MOBILE RESPONSIVE — injected
+═══════════════════════════════════ */
+
+/* Back home button */
+.back-home{
+  position:fixed;top:14px;left:16px;z-index:300;
+  background:rgba(8,9,12,0.85);backdrop-filter:blur(12px);
+  border:1px solid rgba(201,168,76,0.2);border-radius:8px;
+  padding:7px 12px;display:flex;align-items:center;gap:7px;
+  font-family:'Syne',sans-serif;font-size:9px;font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;color:rgba(201,168,76,0.8);
+  text-decoration:none;transition:border-color .2s,color .2s;
+}
+.back-home:hover{border-color:rgba(201,168,76,0.5);color:var(--gold);}
+.back-home svg{flex-shrink:0;}
+
+/* Mobile nav */
+@media(max-width:768px){
+  .nav{padding:0 16px;height:52px;}
+  .nav-brand{font-size:11px;}
+  .nav-links{display:none;}
+  .nav-cta{font-size:9px;padding:7px 14px;}
+  .float-cta{bottom:16px;right:16px;padding:12px 18px;font-size:10px;border-radius:10px;}
+  .container{padding:0 18px;}
+  .sec{padding:64px 0;}
+  .sec-sm{padding:44px 0;}
+  .eyebrow{font-size:9px;letter-spacing:3px;}
+  
+  /* HERO */
+  .hero-grid{grid-template-columns:1fr;gap:36px;}
+  .hero-panel{display:none;}
+  .hero-meta{grid-template-columns:1fr 1fr;gap:10px;}
+  .meta-val{font-size:22px;}
+  .sim-badge{padding:6px 14px;}
+  .sim-text{font-size:9px;}
+  
+  /* REVOLUTION */
+  .rev-grid{grid-template-columns:1fr;gap:32px;}
+  .rev-number{font-size:80px;}
+  
+  /* PROOF */
+  .proof-grid,
+  div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
+  
+  /* PRODUCTS */
+  .products-hero{grid-template-columns:1fr !important;}
+  .prod-featured{grid-column:1 !important;display:flex;flex-direction:column;gap:20px;}
+  .tier-grid{grid-template-columns:1fr 1fr;}
+  .total-row{flex-direction:column;gap:8px;text-align:center;}
+  .total-row .num{font-size:36px;}
+  
+  /* GANTT — horizontal scroll */
+  .gantt{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .gantt-months,.gantt-row{
+    grid-template-columns:120px repeat(5,90px) !important;
+    min-width:570px;
+  }
+  .gantt-label{font-size:10px;padding-right:10px;}
+  .gantt-bar{font-size:8px;padding:0 8px;}
+  
+  /* PRODUCT SECTIONS */
+  .ps-header{grid-template-columns:1fr !important;gap:20px;}
+  .ps-price{text-align:left;}
+  .feat-grid{grid-template-columns:1fr !important;}
+  
+  /* KANBAN — horizontal scroll */
+  .kanban-demo{
+    overflow-x:auto;-webkit-overflow-scrolling:touch;
+    grid-template-columns:repeat(5,140px) !important;
+    padding-bottom:8px;
+  }
+  
+  /* PAYMENT */
+  .payment-grid{grid-template-columns:1fr 1fr;gap:10px;}
+  .pay-n{font-size:40px;}
+  .pay-amount{font-size:28px;}
+  .guar-grid{grid-template-columns:1fr 1fr;}
+  
+  /* SAAS TIERS */
+  div[style*="grid-template-columns:repeat(4,1fr)"].saas-tiers,
+  .saas-tier-grid{grid-template-columns:1fr 1fr !important;}
+  
+  /* REVENUE TABLE — horizontal scroll */
+  .rev-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .rev-hero{flex-direction:column;gap:20px;padding:22px 18px;}
+  .rev-big{font-size:60px;}
+  .rev-bars{display:none;}
+  
+  /* REQ TABLES — horizontal scroll */
+  .req-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:11px;}
+  .req-table th,.req-table td{white-space:normal;min-width:100px;}
+  
+  /* EQUITY */
+  .eq-layout{grid-template-columns:1fr !important;gap:32px;}
+  .pie-wrap{width:200px;height:200px;margin:0 auto;}
+  .pie-wrap svg{width:200px;height:200px;}
+  
+  /* WHY */
+  .why-grid{grid-template-columns:1fr !important;}
+  .comp-table .row{grid-template-columns:1fr !important;}
+  .comp-table .col:nth-child(2){border-left:none;border-top:1px solid rgba(255,255,255,0.04);}
+  
+  /* TEAM */
+  .team-grid{grid-template-columns:1fr 1fr !important;}
+  
+  /* STEPS */
+  .steps-grid{grid-template-columns:1fr !important;}
+  
+  /* CTA BANNER */
+  .cta-banner{flex-direction:column;gap:24px;padding:24px 20px;}
+  .cta-banner h3{font-size:20px;}
+  .cta-right{align-items:flex-start;}
+  .btn-primary{width:100%;text-align:center;justify-content:center;}
+  
+  /* PRD toggles */
+  .prd-toggle{font-size:9px;padding:12px 14px;text-align:left;}
+  
+  /* MARKET GRID */
+  .mkt-grid{grid-template-columns:1fr !important;}
+  
+  /* ROI SECTION */
+  .pain-grid{grid-template-columns:1fr !important;}
+  .roi-transform{grid-template-columns:1fr !important;}
+  .roi-arrow{flex-direction:row;justify-content:center;}
+  .roi-calc{grid-template-columns:1fr 1fr;}
+  .use-cases{grid-template-columns:1fr !important;}
+  
+  /* Hide arrow on mobile */
+  .roi-arrow span{display:none;}
+  
+  /* General inline grids override */
+  div[style*="display:grid;grid-template-columns:1fr 1fr"]{
+    grid-template-columns:1fr !important;
+  }
+  div[style*="display:grid;grid-template-columns:repeat(3"]{
+    grid-template-columns:1fr 1fr !important;
+  }
+  div[style*="display:grid;grid-template-columns:repeat(4"]{
+    grid-template-columns:1fr 1fr !important;
+  }
+  
+  /* Inline grids with 3-col for bottom stat rows */
+  .tech-stack-row > div{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media(max-width:420px){
+  .hero-meta{grid-template-columns:1fr 1fr;}
+  .meta-val{font-size:18px;}
+  .payment-grid{grid-template-columns:1fr !important;}
+  .guar-grid{grid-template-columns:1fr 1fr;}
+  .roi-calc{grid-template-columns:1fr !important;}
+  .tier-grid{grid-template-columns:1fr !important;}
+  .team-grid{grid-template-columns:1fr !important;}
+}
+
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back-home">
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+    <path d="M7 2L3 6L7 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  Башкы бетке
+</a>
+<nav class="nav">
+  <div class="nav-brand">CG × VOS · 2026</div>
+  <div class="nav-links">
+    <a href="#roi">ROI</a>
+    <a href="#products">Продукттар</a>
+    <a href="#timeline">График</a>
+    <a href="#payment">Төлөм</a>
+    <a href="#saas">SaaS</a>
+    <a href="#equity">Өнөктөштүк</a>
+    <a href="#next">Старт</a>
+  </div>
+  <a href="#next" class="nav-cta">Бирге куралы →</a>
+</nav>
+<button class="float-cta" onclick="document.getElementById('next').scrollIntoView({behavior:'smooth'})">Бирге куралы →</button>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="orb" style="width:800px;height:800px;background:radial-gradient(circle,rgba(201,168,76,0.09) 0%,transparent 65%);top:-200px;right:-200px;"></div>
+  <div class="orb" style="width:600px;height:600px;background:radial-gradient(circle,rgba(45,106,79,0.09) 0%,transparent 70%);bottom:-100px;left:-100px;"></div>
+  <div class="container" style="padding-top:100px;padding-bottom:100px;">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-logos">
+          <div class="logo-chip logo-cg">CG</div>
+          <div class="logo-x">×</div>
+          <div class="logo-chip logo-vos">OS</div>
+        </div>
+
+        <div class="sim-badge">
+          <div class="sim-dot"></div>
+          <span class="sim-text">Үч продукт · Бир жолу · Бир эле учурда</span>
+        </div>
+
+        <div class="display">
+          Тигүүчүлүк тармагы үчүн<br><em>операциялык тутум</em>
+        </div>
+        <p class="body-lg" style="max-width:520px;margin-top:20px;">Кезектешип эмес. Этаптар менен эмес. Үч продуктунун баары параллел иштелип чыгат жана бирге чыгат — биринчи күндөн рынокко даяр бир экосистема катары.</p>
+
+        <div class="hero-meta">
+          <div class="meta-card"><div class="meta-lbl">ПОго инвестиция</div><div class="meta-val">$67K</div></div>
+          <div class="meta-card"><div class="meta-lbl">Негиздөөчүнүн үлүшү</div><div class="meta-val">30%</div></div>
+          <div class="meta-card"><div class="meta-lbl">SaaS · 1-жыл</div><div class="meta-val">$315K</div></div>
+          <div class="meta-card"><div class="meta-lbl">Параллел старт</div><div class="meta-val">5 мес</div></div>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <svg style="display:block;margin:0 auto;" width="190" height="170" viewBox="0 0 190 170" fill="none">
+          <style>@keyframes svgfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}</style>
+          <g style="animation:svgfloat 6s ease-in-out infinite">
+          <ellipse cx="95" cy="160" rx="66" ry="8" fill="rgba(201,168,76,0.1)"/>
+          <rect x="18" y="124" width="152" height="11" rx="5" fill="#1A2030" stroke="rgba(201,168,76,0.35)" stroke-width="1"/>
+          <path d="M26 124 L26 68 Q26 58 36 58 L104 58 L104 124 Z" fill="#1E2530" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
+          <path d="M104 58 L104 30 Q104 22 114 22 L154 22 Q163 22 163 30 L163 76 Q163 85 154 87 L104 87" fill="#1E2530" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
+          <ellipse cx="142" cy="21" rx="13" ry="7" fill="#2D3748" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/>
+          <ellipse cx="142" cy="17" rx="9" ry="5" fill="rgba(201,168,76,0.7)"/>
+          <rect x="140" y="6" width="4" height="13" fill="rgba(201,168,76,0.6)"/>
+          <path d="M142 13 Q137 9 123 17 Q105 26 72 40 Q63 52 62 116" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+          <rect x="55" y="112" width="14" height="13" rx="3" fill="#131720" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+          <rect x="61" y="100" width="3" height="20" rx="1" fill="rgba(201,168,76,0.9)"/>
+          <ellipse cx="62.5" cy="120" rx="1.5" ry="2" fill="rgba(0,0,0,0.5)" stroke="rgba(201,168,76,0.8)" stroke-width=".5"/>
+          <circle cx="36" cy="86" r="11" fill="#131720" stroke="rgba(201,168,76,0.4)" stroke-width="1.5"/>
+          <circle cx="36" cy="86" r="4.5" fill="rgba(201,168,76,0.6)"/>
+          <circle cx="156" cy="80" r="17" fill="#131720" stroke="rgba(201,168,76,0.4)" stroke-width="2"/>
+          <circle cx="156" cy="80" r="4.5" fill="rgba(201,168,76,0.7)"/>
+          <line x1="156" y1="67" x2="156" y2="63" stroke="rgba(201,168,76,0.6)" stroke-width="2"/>
+          <line x1="156" y1="93" x2="156" y2="97" stroke="rgba(201,168,76,0.6)" stroke-width="2"/>
+          <line x1="143" y1="80" x2="139" y2="80" stroke="rgba(201,168,76,0.6)" stroke-width="2"/>
+          <line x1="169" y1="80" x2="173" y2="80" stroke="rgba(201,168,76,0.6)" stroke-width="2"/>
+          </g>
+        </svg>
+        <div class="hpanel-card gold featured">
+          <div class="hp-lbl">Флагман · Биринчи приоритет</div>
+          <div class="hp-val" style="color:var(--gold-light);">Toolor App + Store</div>
+          <div class="hp-sub">B2C лояльность · Магазин · FINIK PAY — $17,000</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div class="hpanel-card green">
+            <div class="hp-lbl">Параллел</div>
+            <div class="hp-val" style="color:var(--green-light);font-size:18px;">Бизнес ОС</div>
+            <div class="hp-sub">$25,000</div>
+          </div>
+          <div class="hpanel-card blue">
+            <div class="hp-lbl">Параллел</div>
+            <div class="hp-val" style="color:var(--blue);font-size:18px;">Произв. ОС</div>
+            <div class="hp-sub">$25,000</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REVOLUTIONARY APPROACH ═══ -->
+<section id="revolution" class="sec" style="background:var(--dark2);">
+  <div class="container">
+    <div class="eyebrow">Революциялык мамиле</div>
+    <div class="h1">Кезек менен эмес.<br><em>Баары бир учурда.</em></div>
+    <div class="rev-grid">
+      <div>
+        <p class="body" style="margin-top:20px;max-width:480px;">Көпчүлүк команда кезектешип куруп чыгат: алгач бирин, андан кийин башкасын. Биз башка жол тандадык. Үч команда, үч продукт, беш айлык бир спринт — жана чыгышта толук экосистема, аяктала элек бөлүктөрдүн жыйындысы эмес.</p>
+        <p class="body" style="max-width:480px;margin-top:16px;">Toolor Loyalty App и магазин выходят первыми и задают темп. Пока покупатели загружают приложение, бизнес-операции и производственный Kanban завершают сборку. К финалу — три рабочих продукта, единый сквозной процесс от клиента до цеха.</p>
+        <div style="margin-top:28px;padding:18px 20px;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:12px;">
+          <div style="font-family:'Syne',sans-serif;font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Сквоздук процесс · Жабык цикл</div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:11.5px;color:var(--text-muted);">
+            <span style="background:rgba(201,168,76,0.2);padding:4px 10px;border-radius:5px;color:var(--gold-light);font-weight:600;">Сатып алуучу</span>
+            <span>→</span>
+            <span style="background:rgba(201,168,76,0.15);padding:4px 10px;border-radius:5px;color:var(--gold-light);">Toolor App</span>
+            <span>→</span>
+            <span style="background:rgba(82,183,136,0.15);padding:4px 10px;border-radius:5px;color:var(--green-light);">Продажи</span>
+            <span>→</span>
+            <span style="background:rgba(82,183,136,0.15);padding:4px 10px;border-radius:5px;color:var(--green-light);">Бизнес ОС</span>
+            <span>→</span>
+            <span style="background:rgba(91,141,184,0.15);padding:4px 10px;border-radius:5px;color:var(--blue);">Kanban</span>
+            <span>→</span>
+            <span style="background:rgba(91,141,184,0.15);padding:4px 10px;border-radius:5px;color:var(--blue);">Цех</span>
+            <span>→</span>
+            <span style="background:rgba(201,168,76,0.15);padding:4px 10px;border-radius:5px;color:var(--gold-light);">Готово</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="rev-stat rs-gold" style="position:relative;">
+          <div class="rev-number">3</div>
+          <div class="rs-num" style="color:var(--gold-light);position:relative;">3 продукта</div>
+          <div class="rs-lbl">Параллел иштелип чыгат, бир учурда чыгат</div>
+        </div>
+        <div class="rev-stat rs-green" style="position:relative;">
+          <div class="rev-number">5</div>
+          <div class="rs-num" style="color:var(--green-light);position:relative;">5 месяцев</div>
+          <div class="rs-lbl">iOS · Android · Web · Backend · AI — баары бир спринтте</div>
+        </div>
+        <div class="rev-stat rs-blue">
+          <div class="rs-num" style="color:var(--blue);">2,500+</div>
+          <div class="rs-lbl">фабрика региондо платформаны күтүп жатат. Кезекте биринчи Cool Group турат.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROOF ═══ -->
+<section id="proof" class="sec" style="background:var(--dark);">
+  <div class="container">
+    <div class="eyebrow">Негизги өнөктөш</div>
+    <div class="h1">Cool Group жөн гана өнөктөш эмес.<br><em>Бул далил.</em></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:44px;">
+      <div>
+        <p class="body" style="max-width:480px;">Cool Group регионду эң таасирдүү вертикалдуу интегралданган кийим өндүрүшүн куруп үлгүргөн. Бул тажрыйба — платформанын тармактын калган бөлүгүнө сатуусу үчүн так керек болгон беделди билдирет.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:28px;">
+          <div style="padding:22px 18px;background:var(--dark3);border-top:2px solid var(--gold);border-radius:10px 0 0 10px;">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--gold-light);line-height:1;margin-bottom:6px;">Топ 10</div>
+            <div style="font-size:11px;color:var(--text-muted);">Wildberries Россиядагы эркектер кийимин сатуучулар</div>
+          </div>
+          <div style="padding:22px 18px;background:var(--dark3);border-top:2px solid var(--green-light);">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--green-light);line-height:1;margin-bottom:6px;">Toolor</div>
+            <div style="font-size:11px;color:var(--text-muted);">Улуттук D2C бренд, Кыргызстанда жасалган</div>
+          </div>
+          <div style="padding:22px 18px;background:var(--dark3);border-top:2px solid var(--blue);border-radius:0 10px 10px 0;">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--blue);line-height:1;margin-bottom:6px;">360°</div>
+            <div style="font-size:11px;color:var(--text-muted);">Изилдөө → Өндүрүш → B2B + B2C</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;">
+        <svg width="260" height="260" viewBox="0 0 280 280" fill="none" style="animation:svgfloat 7s ease-in-out infinite;animation-delay:1s;">
+          <ellipse cx="140" cy="245" rx="96" ry="8" fill="rgba(201,168,76,0.1)"/>
+          <rect x="28" y="118" width="224" height="120" rx="4" fill="#161B24" stroke="rgba(201,168,76,0.28)" stroke-width="1.5"/>
+          <path d="M28 118 L51 90 L74 118 L97 90 L120 118 L143 90 L166 118 L189 90 L212 118 L238 118" fill="#1A2030" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
+          <path d="M28 118 L51 90 L74 118" fill="rgba(201,168,76,0.04)"/>
+          <path d="M74 118 L97 90 L120 118" fill="rgba(82,183,136,0.04)"/>
+          <path d="M120 118 L143 90 L166 118" fill="rgba(201,168,76,0.04)"/>
+          <path d="M166 118 L189 90 L212 118" fill="rgba(82,183,136,0.04)"/>
+          <rect x="56" y="46" width="16" height="74" rx="3" fill="#1E2530" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+          <ellipse cx="64" cy="46" rx="9" ry="4" fill="#2D3748" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+          <circle cx="64" cy="38" r="6" fill="rgba(201,168,76,0.06)"/>
+          <circle cx="64" cy="30" r="4" fill="rgba(201,168,76,0.04)"/>
+          <rect x="42" y="133" width="26" height="18" rx="3" fill="rgba(201,168,76,0.1)" stroke="rgba(201,168,76,0.22)" stroke-width="1"/>
+          <rect x="78" y="133" width="26" height="18" rx="3" fill="rgba(201,168,76,0.12)" stroke="rgba(201,168,76,0.22)" stroke-width="1"/>
+          <rect x="114" y="133" width="26" height="18" rx="3" fill="rgba(82,183,136,0.08)" stroke="rgba(82,183,136,0.18)" stroke-width="1"/>
+          <rect x="150" y="133" width="26" height="18" rx="3" fill="rgba(201,168,76,0.08)" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+          <rect x="186" y="133" width="26" height="18" rx="3" fill="rgba(91,141,184,0.08)" stroke="rgba(91,141,184,0.18)" stroke-width="1"/>
+          <rect x="42" y="162" width="26" height="18" rx="3" fill="rgba(82,183,136,0.07)" stroke="rgba(82,183,136,0.15)" stroke-width="1"/>
+          <rect x="78" y="162" width="26" height="18" rx="3" fill="rgba(201,168,76,0.1)" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+          <rect x="108" y="200" width="64" height="36" rx="4" fill="#0D1018" stroke="rgba(201,168,76,0.35)" stroke-width="1.5"/>
+          <rect x="100" y="194" width="80" height="9" rx="2" fill="rgba(201,168,76,0.1)" stroke="rgba(201,168,76,0.25)" stroke-width=".5"/>
+          <text x="140" y="201" text-anchor="middle" fill="rgba(201,168,76,0.65)" font-size="5" font-family="'Syne',sans-serif" letter-spacing="1">COOL GROUP</text>
+          <line x1="140" y1="88" x2="140" y2="68" stroke="rgba(82,183,136,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+          <circle cx="140" cy="63" r="5" fill="rgba(82,183,136,0.5)"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ROI SECTION ═══ -->
+<section id="roi" class="sec" style="background:var(--dark2);">
+  <div class="container">
+    <div class="eyebrow">Инвестициянын кайтарымдуулугу</div>
+    <div class="h1">Өзүн актаган инвестиция.<br><em>Кийинкиге калтырууга болбогон трансформация.</em></div>
+    <p class="body" style="max-width:640px;margin-top:14px;">Cool Group жума сайын болгону пландоого <strong style="color:var(--text);">200 саат</strong> жумшайт — Excel'де жана офлайн жолугушууларда. Бирдиктүү санарип системасыз, реалдуу убакытта көрүнүүсүз, чечим кабыл алуу үчүн маалыматсыз. Бул платформа мунун баарын 5 айда өзгөртөт.</p>
+
+    <!-- Pain points -->
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">📋</div>
+        <div class="pain-title">200 часов/неделю — на планирование в Excel</div>
+        <div class="pain-desc">Толук 5 кызматкер эртеңки эртеңге чейин эскирип калган таблицаларга бардык убактысын жумшайт. Чечимдер буга чейин туура эмес болгон маалыматтар боюнча кабыл алынат.</div>
+        <span class="pain-cost">~$52,000 / жыл болгону эмгек акыда</span>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">📱</div>
+        <div class="pain-title">WhatsApp как корпоративная система управления</div>
+        <div class="pain-desc">B2B заказдары, тигүү тапшырмалары, брак талкуулоо, коллаборация мөөнөттөрү — баары бир чатта. Контекст жоголот. Заказдар упускулат. Дедлайндар бузулат.</div>
+        <span class="pain-cost">Ар бир жоголгон B2B = $3,000–20,000</span>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🏭</div>
+        <div class="pain-title">Цех — чёрный ящик</div>
+        <div class="pain-desc">Кыргызстан курама командасынын формасына заказ кайда туруп калганын эч ким реалдуу убакытта билбейт. Кесүү? Тигүү? ОТК? Маселе мөөнөт өткөндөн кийин гана аныкталат.</div>
+        <span class="pain-cost">Өндүрүш кечигүүлөрү = айыптар жана кардарларды жоготуу</span>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🛍</div>
+        <div class="pain-title">Покупатели Toolor — анонимны</div>
+        <div class="pain-desc">Лоялдуулук программасы жок, колдонмо жок, кайта сатып алуулар жөнүндө маалымат жок. Кардар AsiaMall'га келди, сатып алды, кетти — жана сиз аны артык билбейсиз. Ар жолу нөлдөн баштап.</div>
+        <span class="pain-cost">Лоялдуулук программасыз Retention &lt;20%</span>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🤝</div>
+        <div class="pain-title">Коллаборации управляются вручную</div>
+        <div class="pain-desc">КГ курама командасынын формасы, ретейлерлердин корпоративдик заказдары, сезондук коллекциялар — ар жолу өзүнчө Excel, өзүнчө чат, өзүнчө жолугушуу. Масштабдоо мүмкүн эмес.</div>
+        <span class="pain-cost">Команданын убактысы = эң кымбат ресурс</span>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">📊</div>
+        <div class="pain-title">Решения без данных</div>
+        <div class="pain-desc">Кечээ Азия Молл'дагы чекит канча сатты? Кайсы B2B кардар 2 жумадан бери «туруп калды»? Цехтин кайсы этабы өндүрүштү тормоздоп жатат? Чалуусуз же жолугушуусуз бир да жоопту жок.</div>
+        <span class="pain-cost">Офлайн жолугушуулар = топ-менеджменттин жумуш убактысынын 30%</span>
+      </div>
+    </div>
+
+    <!-- Transformation -->
+    <div class="roi-transform" style="margin-top:44px;">
+      <div class="roi-before">
+        <div class="roi-section-title" style="color:#E07070;">Азыр: аналогдук компания</div>
+        <div class="roi-item">Excel таблицалары ар саатта эскирет</div>
+        <div class="roi-item">200 саат/жума жолугушууларга жана пландоого</div>
+        <div class="roi-item">B2B воронкасы WhatsApp'та жана менеджерлердин башында</div>
+        <div class="roi-item">Цех — көрүнүүсүз кара куту</div>
+        <div class="roi-item">Toolor сатып алуучулары анонимдүү, кайта сатуулар жок</div>
+        <div class="roi-item">Коллаборациялар — ар жолу өзүнчө хаос</div>
+        <div class="roi-item">Отчёттуулук = бир нече саат кол менен жыйноо</div>
+        <div class="roi-item">Бир нерсе туура эмес болуп жатканда сигнал жок</div>
+      </div>
+      <div class="roi-arrow">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(201,168,76,0.12)"/><path d="M16 24 H32 M26 18 L32 24 L26 30" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>5 мес</span>
+      </div>
+      <div class="roi-after">
+        <div class="roi-section-title" style="color:var(--green-light);">Кийин: тигүүчүлүк тармагындагы Tech-компания</div>
+        <div class="roi-item">Бардык маалыматтар — жандуу, реалдуу убакытта, телефондо</div>
+        <div class="roi-item">Пландоо күн эмес, мүнөт талап кылат</div>
+        <div class="roi-item">B2B pipeline 7 стадия, AI-скоринг жана push-алерттер менен</div>
+        <div class="roi-item">Ар бир заказ Kanban'да кесүүдөн жөнөтүүгө чейин көрүнөт</div>
+        <div class="roi-item">Toolor App — миңдеген лоял сатып алуучулар менен түз канал</div>
+        <div class="roi-item">Коллаборациялар = тутумдагы дедлайндары жана жооптуулары бар тапшырмалар</div>
+        <div class="roi-item">AI 3 секундада отчёт жаратат</div>
+        <div class="roi-item">Каалаган тобокел же четтөөдө push-эскертме</div>
+      </div>
+    </div>
+
+    <!-- ROI Numbers -->
+    <div style="margin-top:44px;">
+      <div class="eyebrow">Финансылык негиздөө</div>
+      <div class="h2" style="margin-bottom:24px;">$67,000 <em>биринчи жылда эле</em> өзүн актайт.</div>
+      <div class="roi-calc" style="display:grid;">
+        <div class="roi-num-card">
+          <div class="rn-lbl">200 с/жума пландоонун наркы</div>
+          <div class="rn-val" style="color:#E07070;">$52K</div>
+          <div class="rn-sub">жылда болгону координатор эмгек акысында (орт. $5/с × 200с × 52 жума)</div>
+        </div>
+        <div class="roi-num-card">
+          <div class="rn-lbl">Айда 1 жоголгон B2B'ден жоготуулар</div>
+          <div class="rn-val" style="color:#E07070;">$60K+</div>
+          <div class="rn-sub">жылда структурасыз воронкадан жоголгон заказдардан</div>
+        </div>
+        <div class="roi-num-card">
+          <div class="rn-lbl">Retention +15%те Toolor кирешесинин өсүшү</div>
+          <div class="rn-val" style="color:var(--green-light);">$30K+</div>
+          <div class="rn-sub">жылда лоялдуулук программасынан жана колдонмо аркылуу кайта сатып алуулардан</div>
+        </div>
+        <div class="roi-num-card highlight">
+          <div class="rn-lbl">Жыйынды инвестиция кайтарымы — 1-жыл</div>
+          <div class="rn-val" style="color:var(--green-light);">2.1×</div>
+          <div class="rn-sub">ROI биринчи жылда эле. 2+ жыл — платформа бекер иштейт жана маалымат жаратат</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Use cases specific to Cool Group -->
+    <div style="margin-top:44px;">
+      <div class="eyebrow">Cool Group'тун конкреттүү сценарийлери</div>
+      <div class="h2" style="margin-bottom:24px;">Платформа <em>сиздин реалдуу маселеңизди</em> кантип чечет.</div>
+      <div class="use-cases">
+        <div class="use-case">
+          <div class="uc-tag collab">⚽ Коллаборация</div>
+          <div class="uc-title">Кыргызстан футбол боюнча курама командасынын формасы</div>
+          <div class="uc-desc">Азыр: WhatsApp'та координация, дедлайндары бар Excel, кол менен жолугушуулар. Дизайндагы каалаган өзгөртүү — дагы баарына чалуу. Кийин: тутумда подтапшырмалары, жооптуулары жана дедлайндары бар тапшырма. Дизайн файлдары заказга тиркелген. Баары реалдуу убакытта статусту көрөт.</div>
+          <div class="uc-gain">→ Жумасына 2-3 координациялык жолугушуунун ордуна — нөл. Баары колдонмодо көрүнөт.</div>
+        </div>
+        <div class="use-case">
+          <div class="uc-tag b2b">🏢 B2B ретейлер</div>
+          <div class="uc-title">Wildberries / чекене өнөктөштөн чоң заказ</div>
+          <div class="uc-desc">Азыр: заказ WhatsApp'та келди → Excel'ге которду → жаңыртууну унутту → кардар статусту билгени чалат → бир саат маалымат издейт. Кийин: 7 стадиялуу B2B воронкасы, өндүрүш башталганда Kanban'га автоматтык өтүш, кардар менеджер аркылуу эки клик менен статусту алат.</div>
+          <div class="uc-gain">→ Заказ менен иштөө цикли 3 күндөн 3 сааттка чейин кыскарат.</div>
+        </div>
+        <div class="use-case">
+          <div class="uc-tag b2c">🛍 B2C Toolor</div>
+          <div class="uc-title">AsiaMall'дагы сатып алуучу туруктуу болот</div>
+          <div class="uc-desc">Азыр: сатып алуучу сатып алды, кетти — анын жөнүндө эч нерсе белгисиз. Кийинки жолу келеби же жокпу — белгисиз. Кийин: QR сканерледи → Toolor App'та катталды → балдарды алды → арзандатуу үчүн келди → кайра сатып алды → бир айдан кийин жаңы коллекция жөнүндө push алды → дагы сатып алды.</div>
+          <div class="uc-gain">→ Активдүү лоялдуулук программасы менен Retention &lt;20%тен 40%+га чейин.</div>
+        </div>
+        <div class="use-case">
+          <div class="uc-tag ops">🏭 Өндүрүш</div>
+          <div class="uc-title">Шашылыш заказ: 500 бирдик, 3 жума</div>
+          <div class="uc-desc">Азыр: директор цехте өндүрүш кайда тормоздоп жатканын билбейт — тигүүчүдөн билген устадан гана билет. Кеч болуп калды. Кийин: реалдуу убакытта AI bottleneck аныктоосу, дедлайн бузулуу тобокелинде директорго push, Kanban так көрсөтөт: кесүүдөгү 50 тапшырманын 12си, 3су 2 күндөн ашык туруп калды.</div>
+          <div class="uc-gain">→ Көйгөйлөр 5 күн эмес, 24 саатта аныкталат.</div>
+        </div>
+        <div class="use-case">
+          <div class="uc-tag b2b">📊 Аналитика</div>
+          <div class="uc-title">Директордун жумалык пландоо жыйыны</div>
+          <div class="uc-desc">Азыр: ар кандай Excel файлдарынан маалымат жыйноо, менеджерлерге чалуу, кол менен жыйынтыктоо — 2 саат. Кийин: AI ар бир жума сайын автоматтык отчёт жаратат — 6 чекит боюнча сатуу, B2B воронкасы, цех өндүрүмдүүлүгү, айлык киреше болжолу. Баары телефондо.</div>
+          <div class="uc-gain">→ 2 саат пландоо жыйыны → чечим кабыл алуу үчүн 20 мүнөт.</div>
+        </div>
+        <div class="use-case">
+          <div class="uc-tag b2c">💎 Toolor VIP-кардарлары</div>
+          <div class="uc-title">Platinum сатып алуучулар бренд амбассадору катары</div>
+          <div class="uc-desc">Азыр: сиздин эң лоял сатып алуучуңуз ким экени белгисиз. Аны кармап турууга инструмент жок. Кийин: Platinum кардарлар коллекцияларга эксклюзивдүү эрте кирүү, жабык иш-чараларга VIP-чакыруу, туулган күнгө атайын белектерди алат. Колдонмо сатып алуучуларды бренд фандарына айлантат.</div>
+          <div class="uc-gain">→ Platinum-кардардын LTV орточодон 4–6× жогору.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary statement -->
+    <div style="margin-top:36px;background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(82,183,136,0.05));border:1px solid rgba(201,168,76,0.2);border-radius:16px;padding:28px 32px;display:flex;gap:32px;align-items:center;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:72px;color:rgba(201,168,76,0.15);line-height:1;flex-shrink:0;">ROI</div>
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--text);line-height:1.3;margin-bottom:10px;">5 айда Cool Group болуп калуудан чыгат<br><em style="color:var(--gold-light);">Excel'и бар тигүүчүлүк компаниясы</em> жана <em style="color:var(--green-light);">тармактын технологиялык лидерине</em> айланат.</div>
+        <div style="font-size:13px;color:var(--text-muted);line-height:1.6;">Атаандаштар жетүү үчүн жылдар жана миллиондор жумшайт. Cool Group муну $67,000 үчүн алат — жана кошумча 30% SaaS компаниясында, ал эле платформаны региондогу калган 2,500 фабрикага сатат.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="sec" style="background:var(--dark2);">
+  <div class="container">
+    <div class="eyebrow">Үч продукт. Бир жолу.</div>
+    <div class="h1">Toolor жетектейт.<br><em>Калгандары катарында курулат.</em></div>
+    <p class="body" style="max-width:580px;margin-top:14px;">Toolor Loyalty App жана магазин — экосистеманын флагманы жана биринчи приоритет. Дал ал биринчи болуп сатып алуучуга чыгат. Бизнес-операциялар жана өндүрүш ОС параллел курулат жана толук циклди жабат.</p>
+
+    <div class="products-hero">
+
+      <!-- TOOLOR — FEATURED HERO CARD -->
+      <div class="prod-featured">
+        <div>
+          <div class="flagship-tag">Флагман · Биринчи приоритет</div>
+          <div class="prod-title-lg">Toolor Loyalty App<br><em>& Store</em></div>
+          <p class="body" style="margin-top:10px;max-width:380px;">Бир колдонмодо Toolor брендинин B2C-лоялдуулугу, электрондук каталогу жана онлайн-магазини. QR-карттар, 4 деңгээл cashback, FINIK PAY, box-жазылуу. Биринчи күндөн сатып алуучу менен түз канал.</p>
+          <div class="pills" style="margin-top:16px;">
+            <span class="pill">iOS · Android</span><span class="pill">QR-лояльность</span><span class="pill">4 уровня</span><span class="pill">E-каталог</span><span class="pill">FINIK PAY</span><span class="pill">Box-подписка</span><span class="pill">App Store + Play</span>
+          </div>
+          <div class="prod-price-lg">$17,000 <span>включено в пакет</span></div>
+        </div>
+        <div>
+          <!-- Loyalty tiers preview -->
+          <div style="font-family:'Syne',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);margin-bottom:12px;">Лоялдуулук программасы · 4 деңгээл</div>
+          <div class="tier-grid">
+            <div class="tier-card t-b"><div class="t-icon">🥉</div><div class="t-name" style="color:#CD7F32;">Bronze</div><div class="t-thresh">0–9,999</div><div class="t-pct" style="color:#CD7F32;">3%</div></div>
+            <div class="tier-card t-s"><div class="t-icon">🥈</div><div class="t-name" style="color:#A8A9AD;">Silver</div><div class="t-thresh">10K–29K</div><div class="t-pct" style="color:#A8A9AD;">5%</div></div>
+            <div class="tier-card t-g"><div class="t-icon">🥇</div><div class="t-name" style="color:var(--gold);">Gold</div><div class="t-thresh">30K–79K</div><div class="t-pct" style="color:var(--gold);">8%</div></div>
+            <div class="tier-card t-p"><div class="t-icon">💎</div><div class="t-name" style="color:var(--green-light);">Platinum</div><div class="t-thresh">80K+</div><div class="t-pct" style="color:var(--green-light);">12%</div></div>
+          </div>
+          <div style="margin-top:14px;padding:12px 14px;background:rgba(201,168,76,0.06);border-radius:10px;border:1px solid rgba(201,168,76,0.15);font-size:11.5px;color:var(--text-muted);">
+            Босоголор жана кэшбэк % каалаган убакта администратор тарабынан жөнгө салынат — колдонмону жаңыртпастан.
+          </div>
+        </div>
+      </div>
+
+      <!-- Business OS -->
+      <div class="prod-card c-green">
+        <div class="prod-icon" style="background:rgba(82,183,136,0.12);">🏭</div>
+        <div class="prod-name">Бизнес-операциялар платформасы</div>
+        <p class="prod-desc">B2B воронка, бөлүм тапшырмалары, AI-аналитика. Компаниянын командалык борбору: 7 роль, 6 дашборд, 12 AI-функция, real-time чат, календарь, план/факт сатуу.</p>
+        <div class="prod-price">$25,000 <span>включено в пакет</span></div>
+        <div class="pills"><span class="pill">Канбан</span><span class="pill">B2B CRM · 7 стадий</span><span class="pill">AI-отчёты</span><span class="pill">Чат</span><span class="pill">iOS · Android · Web</span></div>
+      </div>
+
+      <!-- Production OS -->
+      <div class="prod-card c-blue">
+        <div class="prod-icon" style="background:rgba(91,141,184,0.12);">⚙️</div>
+        <div class="prod-name">Өндүрүштүк ОС + Kanban</div>
+        <p class="prod-desc">Санарип цех: заказ агымы кесүү → тигүү → ОТК → даяр. WIP-лимиттер, чектөөлөр теориясы, ар бир жумушчу үчүн колдонмо, WhatsApp ордуна чат.</p>
+        <div class="prod-price">$25,000 <span>включено в пакет</span></div>
+        <div class="pills"><span class="pill">Цифровые следы</span><span class="pill">Bottleneck AI</span><span class="pill">Приложение рабочих</span><span class="pill">TOC</span></div>
+      </div>
+
+    </div>
+
+    <div class="total-row">
+      <div>
+        <div class="lbl">Сооснователь пакетинин баасы</div>
+        <div class="save" style="margin-top:4px;">Рыноктук баасы $80,000 → сиз $13,000 үнөмдөйсүз (−16%)</div>
+      </div>
+      <div class="num">$67,000</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PARALLEL TIMELINE ═══ -->
+<section id="timeline" class="sec" style="background:var(--dark);">
+  <div class="container">
+    <div class="eyebrow">Иштеп чыгуу графиги</div>
+    <div class="h1">Беш ай.<br><em>Үч агым. Бир финиш.</em></div>
+    <p class="body" style="max-width:560px;margin-top:14px;">Toolor App биринчи старт алат — анын MVP'ин сатып алуучулар эң алгач көрөт. Бизнес-операциялар жана өндүрүш ОС параллел агымда жүрөт. Үчөө тең финалда жолугат.</p>
+
+    <div class="gantt">
+      <div class="gantt-months">
+        <div></div>
+        <div class="gm-label">Месяц 1</div>
+        <div class="gm-label">Месяц 2</div>
+        <div class="gm-label">Месяц 3</div>
+        <div class="gm-label">Месяц 4</div>
+        <div class="gm-label">Месяц 5</div>
+      </div>
+
+      <!-- Toolor rows -->
+      <div style="font-family:'Syne',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:12px 0 6px 0;padding-left:4px;">★ Toolor Loyalty App & Store · Флагман</div>
+      <div class="gantt-row">
+        <div class="gantt-label">Лояльность · QR · Auth</div>
+        <div class="gantt-bar gold span3">Auth · QR-карта · Тиры · Баллы · POS</div>
+        <div></div><div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">Каталог · Магазин · Оплата</div>
+        <div></div>
+        <div class="gantt-bar gold span3">Каталог · Корзина · FINIK PAY · Акции</div>
+        <div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">Admin · QA · App Store</div>
+        <div></div><div></div><div></div>
+        <div class="gantt-bar gold span2">Админ · Box · QA · Публикация <span class="milestone">🚀 Live</span></div>
+      </div>
+
+      <div style="height:1px;background:rgba(255,255,255,0.04);margin:16px 0;grid-column:1/-1;"></div>
+
+      <!-- Business OS -->
+      <div style="font-family:'Syne',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--green-light);margin:12px 0 6px 0;padding-left:4px;">Бизнес-операциялар платформасы</div>
+      <div class="gantt-row">
+        <div class="gantt-label">Инфраструктура · Auth</div>
+        <div class="gantt-bar green span2">Сервер · БД · Auth · Роли · CI/CD</div>
+        <div></div><div></div><div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">Задачи · Календарь · B2B</div>
+        <div></div>
+        <div class="gantt-bar green span3">Бизнес-задачи · Календарь · B2B CRM · 7 стадий</div>
+        <div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">Продажи · AI · Веб</div>
+        <div></div><div></div><div></div>
+        <div class="gantt-bar green span2">Продажи · AI-аналитика · Flutter Web · QA <span class="milestone">✓</span></div>
+      </div>
+
+      <div style="height:1px;background:rgba(255,255,255,0.04);margin:16px 0;grid-column:1/-1;"></div>
+
+      <!-- Production OS -->
+      <div style="font-family:'Syne',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin:12px 0 6px 0;padding-left:4px;">Өндүрүштүк ОС + Kanban</div>
+      <div class="gantt-row">
+        <div class="gantt-label">Kanban · Заказы</div>
+        <div></div>
+        <div class="gantt-bar blue span2">Kanban-доска · Заказы · WIP · Мост Бизнес→Произв.</div>
+        <div></div><div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">Задачи · Чат · Следы</div>
+        <div></div><div></div><div></div>
+        <div class="gantt-bar blue span2">Задачи рабочих · Чат RT · Цифровые следы</div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">AI · Дашборды · QA</div>
+        <div></div><div></div><div></div><div></div>
+        <div class="gantt-bar blue">Bottleneck AI · QA <span class="milestone">✓</span></div>
+      </div>
+
+      <div style="height:1px;background:rgba(201,168,76,0.15);margin:16px 0;grid-column:1/-1;"></div>
+
+      <!-- Final QA -->
+      <div class="gantt-row">
+        <div class="gantt-label" style="color:var(--gold);">Интеграция · Сдача</div>
+        <div></div><div></div><div></div><div></div>
+        <div class="gantt-bar qa">Интеграция · Финальный QA · Передача кода <span class="milestone">🏁</span></div>
+      </div>
+    </div>
+
+    <div class="parallel-note">
+      <div class="pn-icon">⚡</div>
+      <div class="pn-text"><strong>Эмне үчүн параллел иштейт:</strong> Toolor App'тын өз алдынча бэкенди бар (Loyalty API, Products API, FINIK PAY). Бизнес-операциялар жалпы инфраструктурада курулат. Өндүрүш ОС Бизнес→Kanban көпүрүсү аркылуу интеграция этабында туташат. Үч өз алдынча агым, бир жалпы акыркы жыйын.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DEEP DIVE: TOOLOR ═══ -->
+<div style="background:var(--dark2);">
+  <div class="container">
+    <div class="product-section">
+      <div class="ps-header">
+        <div>
+          <div class="ps-tag gold">★ Toolor Loyalty App & Store · Флагман</div>
+          <div class="h2">Прямой канал с покупателем.<br><em>Лояльность. Магазин. Данные.</em></div>
+          <p class="body" style="max-width:520px;margin-top:12px;">Первый продукт, который увидит конечный покупатель. Строится как MVP в первые 6 недель, полный запуск — к месяцу 5. Toolor App замыкает экосистему: данные о покупках возвращаются в производственную аналитику.</p>
+        </div>
+        <div class="ps-price" style="border-color:rgba(201,168,76,0.3);">
+          <div class="lbl">Стоимость</div>
+          <div class="big">$17K</div>
+          <div style="font-size:11px;color:var(--text-dim);margin-top:3px;">iOS · Android · Admin</div>
+        </div>
+      </div>
+      <div class="feat-grid">
+        <div class="feat-item"><div class="fi-title">🔖 QR-карта лояльности · offline</div><div class="fi-desc">Персональный QR доступен без интернета. Кассир сканирует — баллы начисляются автоматически.</div></div>
+        <div class="feat-item"><div class="fi-title">🛍 Онлайн-магазин · FINIK PAY</div><div class="fi-desc">Синхронизируется с toolorkg.com. Корзина, заказы, оплата через FINIK PAY и QR-банки (Мбанк, Оптима, Элкарт).</div></div>
+        <div class="feat-item"><div class="fi-title">📦 Box-подписка · Эксперимент</div><div class="fi-desc">Ежемесячная коробка с одеждой Toolor. Администратор управляет составом, подписчиками и отгрузкой вручную.</div></div>
+        <div class="feat-item"><div class="fi-title">⚙️ Панель администратора</div><div class="fi-desc">CRUD товаров, управление акциями (%, промокод, флэш-сейл), пользователями, баллами, аналитика, аудит-лог.</div></div>
+        <div class="feat-item"><div class="fi-title">🔔 Push · 12+ типов</div><div class="fi-desc">Акции, новые поступления, начисление баллов, статус заказа, эксклюзив по тиру — таргетированные и массовые.</div></div>
+        <div class="feat-item"><div class="fi-title">🔗 Экосистема Cool Group</div><div class="fi-desc">Toolor App замыкает цикл: Продажи → Лояльность → Повторные покупки → Данные → Производственная аналитика.</div></div>
+      </div>
+      <button class="prd-toggle" onclick="togglePrd(this)">📄 ТЗ — Toolor Loyalty App & Store · Толук спецификация (15 модуль) <span class="arr">▼</span></button>
+      <div class="prd-body">
+
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;">
+          <div style="background:var(--dark4);border-radius:8px;padding:12px;text-align:center;border:1px solid rgba(201,168,76,0.15);">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--gold-light);">15</div>
+            <div style="font-size:10px;color:var(--text-dim);">Модулей</div>
+          </div>
+          <div style="background:var(--dark4);border-radius:8px;padding:12px;text-align:center;border:1px solid rgba(201,168,76,0.15);">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--gold-light);">60+</div>
+            <div style="font-size:10px;color:var(--text-dim);">Экранов</div>
+          </div>
+          <div style="background:var(--dark4);border-radius:8px;padding:12px;text-align:center;border:1px solid rgba(201,168,76,0.15);">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--gold-light);">4</div>
+            <div style="font-size:10px;color:var(--text-dim);">Роли пользователей</div>
+          </div>
+          <div style="background:var(--dark4);border-radius:8px;padding:12px;text-align:center;border:1px solid rgba(201,168,76,0.15);">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--gold-light);">10</div>
+            <div style="font-size:10px;color:var(--text-dim);">API-групп</div>
+          </div>
+        </div>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 1 — Авторизация жана профиль</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Регистрация по номеру телефона с SMS-OTP подтверждением (6-значный код, срок жизни 5 мин)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td>Вход по телефону + OTP (без пароля) или email + пароль</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td>Профиль: имя, фото, дата рождения, пол, город — редактирование в любое время</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>4</td><td>Автоматические бонусные баллы в день рождения + push-поздравление</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>5</td><td>История покупок и баллов: дата, сумма, магазин/онлайн, начислено/списано</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>6</td><td>Управление push-настройками из профиля по категориям (промо / транзакционные)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>7</td><td>Удаление аккаунта по запросу (GDPR-ready, законодательство КР)</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>8</td><td>Язык интерфейса: русский (основной), кыргызский (опционально)</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 2 — QR-лоялдуулук жана тирлер</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Персональный QR-код лояльности — доступен offline, без интернета (кэшируется в приложении)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td>Автообновление QR каждые 24 часа — защита от копирования и скриншотов</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td>POS-интерфейс кассира: веб-страница с вводом QR + сумма → начисление баллов (≤100ms)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>4</td><td>Начисление баллов: базовая ставка по тиру (3%/5%/8%/12% от суммы покупки)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>5</td><td>Акционный множитель баллов: «Двойные баллы в выходные» — настраивается администратором</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>6</td><td>Списание баллов: частичная или полная оплата заказа (1 балл = 1 сом, настраивается)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>7</td><td>Прогресс-бар до следующего тира с точным указанием сколько баллов осталось</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>8</td><td>4 тира лояльности: 🥉 Bronze (0–9,999 · 3%) → 🥈 Silver (10K–29,999 · 5% · ранний доступ) → 🥇 Gold (30K–79,999 · 8% · спец.цены) → 💎 Platinum (80K+ · 12% · VIP + именной подарок)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>9</td><td>Все пороги тиров и % кэшбэка — настраиваются суперадмином без обновления приложения</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>10</td><td>Реферальная программа: уникальный код, баллы за приглашённого друга после его первой покупки</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 3 — E-каталог (по данным toolorkg.com)</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Категории: Мужчинам (Футболки · Лонгсливы · Свитшоты · Худи · Бомбер · Флис · Рубашки · Вязанный трикотаж · Лайтдаун · Куртки · Брюки)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td>Категории: Женщинам (Футболки · Боди/Топы · Лонгсливы · Свитшоты · Худи · Флис · Вязанный трикотаж · Жилеты · Ветровки · Рубашки · Куртки · Брюки)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td>Категории: Аксессуары (Сумки · Кепки · Панамы · Шапки · Платки · Перчатки · Рюкзаки)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>4</td><td>Раздел «Оффер» — товары со скидкой из всех категорий в одном месте</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>5</td><td>Карточка товара: фото-галерея swipe (минимум 3 фото), название, цена в сомах, старая цена при скидке</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>6</td><td>Выбор размера (XS/S/M/L/XL/XXL) с цветовым индикатором наличия (есть / мало / нет)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>7</td><td>Выбор цвета с превью вариантов, состав ткани, инструкции по уходу, страна производства: Кыргызстан</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>8</td><td>Метки на карточке: «Новинка» / «Оффер» / «Хит» / «Только Gold+» / «Эксклюзив»</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>9</td><td>«Последние X шт.» — предупреждение о заканчивающемся остатке</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>10</td><td>Полнотекстовый поиск по названию, категории, тегам. Фильтры: размер, цвет, цена, наличие. Сортировка: новинки, цена, популярность</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>11</td><td>Раздел «Вам может понравиться» — рекомендации на основе просмотров и категории</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 4 — Онлайн-магазин жана оплата</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Корзина: добавление, изменение количества, удаление, итоговая сумма с баллами и скидками</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td>Оформление заказа: имя, телефон, адрес доставки ИЛИ «Самовывоз» из AsiaMall</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td>Оплата — FINIK PAY (основной шлюз): интеграция с API, подтверждение, вебхуки статуса</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>4</td><td>QR-оплата банков прямо из приложения: Мбанк, Оптима, Элкарт, Visa/MC — сканирование QR без выхода из приложения</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>5</td><td>Оплата баллами: частичная (выбор суммы баллами) или полная, остаток — деньгами</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>6</td><td>Ввод промокода при оформлении с мгновенной валидацией и пересчётом суммы</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>7</td><td>Статусы заказа: Принят → Собирается → Отправлен → Доставлен / Готов к самовывозу</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>8</td><td>История заказов с фильтром по дате и статусу. Повторный заказ одним нажатием.</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>9</td><td>Избранное (wishlist): добавление из каталога и карточки, список избранного с актуальными ценами</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>10</td><td>Автоначисление баллов за заказ после статуса «Доставлен» / «Выдан» — с push-подтверждением</td><td><span class="bh">Жогору</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 5 — Акциялар, флэш-сейлдар жана промокоддор</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Администратор создаёт акцию: название, тип скидки (% или фиксированная), дата начала/окончания</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td>Таргетинг акции: весь каталог / категория / конкретные товары / по тиру (только Gold+)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td>Промокоды: уникальный код, одноразовый или с лимитом использований, срок действия</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>4</td><td>Флэш-сейл: акция с таймером обратного отсчёта на экране пользователя — нагнетает срочность</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>5</td><td>Лента акций на главном экране: баннеры-карусель, активные предложения, отсчёт до конца</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>6</td><td>Акционный множитель баллов: «Двойные баллы в выходные» — увеличивает начисление, а не скидку</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 6 — Push-эскертмелер (12 триггер)</div>
+        <table class="req-table">
+          <thead><tr><th>Тип уведомления</th><th>Триггер события</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>Начисление баллов</td><td>QR отсканирован кассиром или заказ доставлен</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>Изменение статуса заказа</td><td>Каждый переход: Принят / Собирается / Отправлен / Доставлен</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>Новая акция / флэш-сейл</td><td>Администратор публикует акцию или запускает флэш-сейл по расписанию</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>Повышение тира лояльности</td><td>Пользователь достиг нового порога баллов — поздравление + описание новых привилегий</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>День рождения</td><td>Автоматически в дату рождения: бонусные баллы + персональное поздравление</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>Новая коллекция</td><td>Администратор добавляет товары с меткой «Новинка» и отправляет push</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>Брошенная корзина</td><td>Товары в корзине &gt;24ч без оформления — напоминание со скидкой/баллами</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>Бокс-подписка</td><td>Формирование нового бокса / напоминание об оплате / статус отгрузки</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>Ручная рассылка</td><td>Администратор отправляет массово или по сегменту (тир, город, дата регистрации)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>Реферал активирован</td><td>Приглашённый другом пользователь совершил первую покупку</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 7 — E-лукбук / Редакциялык лента</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Лента редакционных карточек: обложка, заголовок, дата — лукбуки, истории коллекций, «Путь кочевника», советы по стилю</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>2</td><td>Полноэкранный просмотр материала: фото + текст + шоппинг-ссылки на конкретные товары из каталога</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>3</td><td>Прямой переход из лукбука → карточка товара → «В корзину» без потери контекста</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>4</td><td>Администратор создаёт материал: обложка, rich-text, галерея, теги-товары для быстрого шоппинга</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 8 — Box-жазылуу (Эксперимент)</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Пользователь: раздел «Box», описание концепции, фото предыдущих боксов, кнопка «Хочу подписаться»</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>2</td><td>Форма заявки: размер, предпочтения по стилю, адрес доставки</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>3</td><td>Статус заявки: На рассмотрении → Одобрена → Бокс формируется → Отправлен → Доставлен</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>4</td><td>Администратор: CRUD бокса месяца (состав, цена, фото). Список подписчиков с ручным управлением отгрузкой</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>5</td><td>Таблица администратора: подписчик → статус оплаты → статус отгрузки → трек-номер</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>6</td><td>Аналитика подписки: кол-во активных, выручка за месяц. Биллинг — РУЧНОЙ в первой версии.</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 9 — Администратор панели (Web) · 8 бөлүм</div>
+        <table class="req-table">
+          <thead><tr><th style="width:22%;">Раздел</th><th>Ключевая функциональность</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>Товары</td><td>CRUD с до 10 фото/товар, управление вариантами (размер×цвет→остаток), быстрое inline-редактирование остатков, метки, алерт «мало на складе» (настраиваемый порог), дублирование товара</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>Заказы</td><td>Список с фильтрами по дате/статусу/оплате, смена статуса (→ автоматический push покупателю), детальная страница заказа с историей изменений, экспорт в Excel/CSV</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>Пользователи</td><td>Список с поиском по телефону/имени/тиру, карточка пользователя с историей покупок и баллов, ручное начисление/списание баллов (с аудит-логом), ручное изменение тира, блокировка, сегментация и экспорт</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>Лояльность</td><td>Настройка тиров (пороги, % кэшбэка, привилегии) без обновления приложения, статистика по тирам, история операций с фильтрами</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>Акции</td><td>CRUD акций всех типов (% / фикс / промокод / флэш-сейл / множитель баллов), таргетинг по категории/товару/тиру, архив завершённых акций, статистика использования промокодов</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>Аналитика</td><td>Дашборд: выручка по дням/неделям/месяцам, кол-во заказов, средний чек, активные пользователи, топ товаров, популярные категории, воронка retention по тирам, экспорт отчётов PDF/Excel</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>Push-рассылки</td><td>Массовая отправка по всем или по сегменту (тир, город, дата рег.), история отправленных уведомлений, статистика открытий</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>Аудит-лог</td><td>Полная история всех действий администраторов: кто / что / когда / IP-адрес. Фильтрация по администратору и типу действия.</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Backend · API · Инфраструктура</div>
+        <table class="req-table">
+          <thead><tr><th style="width:22%;">Компонент</th><th>Спецификация</th></tr></thead>
+          <tbody>
+            <tr><td>Стек</td><td>Node.js (NestJS) или Python (FastAPI) · PostgreSQL · Redis (кэш, сессии) · AWS S3 / MinIO (медиа) · Firebase Cloud Messaging · FINIK PAY API · JWT (access 15мин + refresh 30 дней)</td></tr>
+            <tr><td>API-группы (10)</td><td>Auth · Users · Loyalty · Tiers · Products · Categories · Orders · Promotions · Subscriptions · Editorial · Notifications · Admin Analytics</td></tr>
+            <tr><td>Безопасность</td><td>HTTPS · rate limiting (SMS OTP max 5 попыток / 10 мин) · RBAC на уровне API · валидация входных данных · аудит-лог</td></tr>
+            <tr><td>Производительность</td><td>API &lt;200ms (p95) · QR-валидация &lt;100ms · каталог с пагинацией &lt;300ms · 500+ одновременных пользователей</td></tr>
+            <tr><td>Оффлайн и медиа</td><td>QR-карта offline · кэш каталога 30 мин · WebP-оптимизация фото · CDN-раздача · лимит 5 МБ/фото</td></tr>
+            <tr><td>Инфраструктура</td><td>Docker · CI/CD (GitHub Actions) · staging + production окружения · ежедневные бэкапы БД (30 дней) · 99.5% SLA uptime</td></tr>
+          </tbody>
+        </table>
+
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(82,183,136,0.06);border:1px solid rgba(82,183,136,0.15);border-radius:8px;font-size:12px;color:var(--text-muted);">
+          <strong style="color:var(--green-light);">Модели данных (15):</strong> User · LoyaltyAccount · LoyaltyTransaction · Tier · QrToken · Product · ProductVariant · Category · Order · OrderItem · Promotion · PromoCode · Editorial · BoxPlan · BoxSubscription · Notification · AuditLog
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DEEP DIVE: BUSINESS OS ═══ -->
+<div style="background:var(--dark);">
+  <div class="container">
+    <div class="product-section">
+      <div class="ps-header">
+        <div>
+          <div class="ps-tag green">Бизнес-операции</div>
+          <div class="h2">Командный центр компании.<br><em>От сделки до производства.</em></div>
+          <p class="body" style="max-width:520px;margin-top:12px;">Единое приложение для всего менеджмента: 7 ролей, 4 отдела, B2B воронка, продажи по 6 точкам, 12 AI-функций. Строится параллельно с Toolor — запускается вместе с ним.</p>
+        </div>
+        <div class="ps-price" style="border-color:rgba(82,183,136,0.25);">
+          <div class="lbl">Стоимость</div>
+          <div class="big" style="color:var(--green-light);">$25K</div>
+          <div style="font-size:11px;color:var(--text-dim);margin-top:3px;">iOS · Android · Web · Admin</div>
+        </div>
+      </div>
+      <div class="feat-grid">
+        <div class="feat-item"><div class="fi-title">📋 Задачи · 4 отдела</div><div class="fi-desc">Коммерческий, Дизайн, Маркетинг, Производство-мост. Статусы, дедлайны, ролевая фильтрация.</div></div>
+        <div class="feat-item"><div class="fi-title">🤝 B2B воронка · 7 стадий</div><div class="fi-desc">Переговоры → Производство → Канбан → Выполнен. При стадии «Производство» — автосоздание заказа на Kanban.</div></div>
+        <div class="feat-item"><div class="fi-title">📊 Продажи · 6 точек</div><div class="fi-desc">Азия Молл, Online, Бусик, Шоурум, Бишкек-парк. Ежедневный ввод план/факт, графики отклонений.</div></div>
+        <div class="feat-item"><div class="fi-title">🤖 AI · 6 функций</div><div class="fi-desc">Прогноз продаж, B2B-скоринг, оптимальные даты акций, эффективность отделов, LLM-отчёты, умные напоминания.</div></div>
+        <div class="feat-item"><div class="fi-title">📅 Календарь · 9 категорий</div><div class="fi-desc">Коллекция, Магазин, Акция, Партнёрство, Коллаб, Бусик, Спонсорство, FIFA, Благотворительность.</div></div>
+        <div class="feat-item"><div class="fi-title">🖥 Flutter Web + PWA</div><div class="fi-desc">Responsive-дизайн, Kanban drag-and-drop на десктопе, расширенные дашборды, Web Push, единая кодовая база.</div></div>
+      </div>
+      <button class="prd-toggle" onclick="togglePrd(this)">📄 ТЗ — Бизнес-операциялар платформасы · Полная спецификация (7 ролей · 9 модулей · 12 AI-функций) <span class="arr">▼</span></button>
+      <div class="prd-body">
+
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;">
+          <div style="background:var(--dark4);border-radius:8px;padding:12px;text-align:center;border:1px solid rgba(82,183,136,0.2);">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--green-light);">7</div>
+            <div style="font-size:10px;color:var(--text-dim);">Ролей</div>
+          </div>
+          <div style="background:var(--dark4);border-radius:8px;padding:12px;text-align:center;border:1px solid rgba(82,183,136,0.2);">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--green-light);">9</div>
+            <div style="font-size:10px;color:var(--text-dim);">Модулей</div>
+          </div>
+          <div style="background:var(--dark4);border-radius:8px;padding:12px;text-align:center;border:1px solid rgba(82,183,136,0.2);">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--green-light);">12</div>
+            <div style="font-size:10px;color:var(--text-dim);">AI-функций</div>
+          </div>
+          <div style="background:var(--dark4);border-radius:8px;padding:12px;text-align:center;border:1px solid rgba(82,183,136,0.2);">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--green-light);">16</div>
+            <div style="font-size:10px;color:var(--text-dim);">Push-триггеров</div>
+          </div>
+        </div>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--green-light);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Колдонуучу ролдору</div>
+        <table class="req-table">
+          <thead><tr><th style="width:22%;">Роль</th><th>Контур</th><th>Описание и доступ</th></tr></thead>
+          <tbody>
+            <tr><td>👔 Директор</td><td>Оба</td><td>Двойной режим: бизнес-дашборд + производственный обзор. Полный AI-блок, все отчёты, KPI компании. 5 бизнес + 5 производственных вкладок.</td></tr>
+            <tr><td>📊 Проект-менеджер</td><td>Бизнес</td><td>Координация задач всех отделов, календарь событий, B2B-воронка, аналитика продаж. 5 вкладок.</td></tr>
+            <tr><td>🏷 Руководитель отдела</td><td>Бизнес</td><td>Задачи своего отдела (4 отдела), прогресс команды, дедлайны. 4 вкладки.</td></tr>
+            <tr><td>👤 Сотрудник</td><td>Бизнес</td><td>Назначенные личные задачи, KPI, уведомления. 4 вкладки.</td></tr>
+            <tr><td>⚙️ Менеджер производства</td><td>Производство</td><td>Управление заказами и Kanban-доской, дедлайны, назначение задач рабочим, AI-подсказки. 5 вкладок.</td></tr>
+            <tr><td>🧵 Рабочий цеха</td><td>Производство</td><td>Только свои задачи, быстрая смена статуса (2–3 нажатия), чат с менеджером. 3 вкладки.</td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--green-light);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 1 — Бизнес-тапшырмалар · 4 бөлүм</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><strong>Коммерческий отдел:</strong> задачи по переговорам, работе с B2B-клиентами, закрытию сделок, документообороту</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td><strong>Отдел дизайна:</strong> задачи по разработке коллекций, созданию макетов, работе с лекалами, коллаборациям (форма для сборной КГ и т.п.)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td><strong>Отдел маркетинга:</strong> задачи по акциям, SMM, съёмкам, продвижению коллекций, офферам</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>4</td><td><strong>Отдел «Производство-мост»:</strong> задачи по спецификациям, закупке материалов, подготовке к запуску — мост на Kanban-конвейер</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>5</td><td>Задача: название, описание, отдел, множественные исполнители + кураторы, дедлайн, приоритет, файлы, комментарии</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>6</td><td>Статусы задачи: Не начата → В работе → На проверке → Завершена. Push-уведомление при каждом переходе</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>7</td><td>Ролевая фильтрация: рук. отдела видит только свой отдел; сотрудник — только свои задачи; ПМ/директор — все отделы</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>8</td><td>Привязка задачи к событию календаря — все задачи коллаборации собраны под одним событием</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>9</td><td>Real-time комментарии к задаче с упоминанием @пользователя и автопушем</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--green-light);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 2 — Окуялар календары · 9 категория</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Категории событий: Коллекция · Магазин · Акция · Партнёрство · Коллаб · Бусик · Спонсорство · FIFA/Спорт · Благотворительность</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td>Календарный вид (месяц/неделя/день) + timeline-список, фильтрация по категориям</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td>CRUD событий: название, категория, описание, даты начала/окончания, ответственный, участники</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>4</td><td>Многодневные события (коллаборации, сезонные кампании), push-напоминания за N дней (настраиваемо)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>5</td><td>Привязка бизнес-задач к событию — все задачи по коллаборации «Форма для сборной КГ» под одним событием</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>6</td><td>AI-рекомендации: оптимальные даты акций на основе истории продаж и сезонности</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--green-light);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 3 — B2B-воронка · 7 стадия (Wildberries, ретейлеры, корпоративные заказы)</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>7 стадий воронки: Переговоры → Цена дана → Клиент думает → Разработка → Готово к запуску → <strong>Производство</strong> → Выполнен</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td>CRUD B2B-заказов: клиент (Wildberries / OZON / ретейлер / частный), контакт, товарные позиции (название, кол-во, ед. изм.), сумма, дедлайн</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td>При переходе в стадию «Производство» → <strong>автоматическое создание производственного заказа на Kanban-доске</strong> (мост контуров)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>4</td><td>Обратная синхронизация: прогресс Kanban (Крой → Пошив → Проверка → Готово) отображается в B2B-карточке</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>5</td><td>AI B2B-скоринг: вероятность закрытия сделки % + рекомендации по follow-up действиям</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>6</td><td>Push-алерт: клиент «завис» на стадии более N дней (настраиваемо) — директор + ПМ получают напоминание</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>7</td><td>История изменений по заказу: кто, когда, что изменил — полный аудит-лог</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--green-light);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 4 — Сатуу · 6 чекит (Азия Молл, Online, Бусик, Шоурум, Бишкек-парк, ТЦ)</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Ежедневный ввод продаж по каждой из 6 точек: наличные отдельно + безналичные отдельно</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td>Месячные планы продаж по точкам vs факт, автоматическое вычисление отклонения %</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td>Графики: столбчатые (сравнение точек), линейные (динамика), круговые (доля точки в общем)</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>4</td><td>AI-прогноз выручки на текущий и следующий месяц по каждой точке (Prophet/ARIMA)</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>5</td><td>AI-рекомендации: какие точки требуют внимания, почему отстают, что делать</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>6</td><td>Экспорт отчётов по продажам: PDF / Excel за произвольный период</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--green-light);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 5 — AI-аналитика · 12 функция</div>
+        <table class="req-table">
+          <thead><tr><th style="width:30%;">AI-функция</th><th>Описание</th></tr></thead>
+          <tbody>
+            <tr><td>Прогноз продаж</td><td>Выручка на текущий/следующий месяц по каждой точке продаж (Prophet/ARIMA)</td></tr>
+            <tr><td>B2B-скоринг</td><td>Вероятность закрытия B2B-сделки % + приоритетные рекомендации по follow-up</td></tr>
+            <tr><td>Оптимальные даты акций</td><td>На основе истории продаж и сезонности: когда запускать акции для максимального эффекта</td></tr>
+            <tr><td>Эффективность отделов</td><td>Скорость выполнения задач, % просрочек, загрузка сотрудников по отделам</td></tr>
+            <tr><td>Риск просрочки B2B</td><td>Push-алерт при обнаружении B2B-заказа, который рискует сорвать дедлайн</td></tr>
+            <tr><td>LLM-отчёты (бизнес)</td><td>Еженедельный и ежемесячный авто-отчёт: продажи, задачи, B2B — генерируется языковой моделью (Claude/GPT)</td></tr>
+            <tr><td>Прогноз выполнения плана</td><td>На сколько % выполним план к концу месяца при текущей динамике</td></tr>
+            <tr><td>Умные напоминания</td><td>AI определяет приоритетные действия на день и отправляет персональный push утром</td></tr>
+            <tr><td>Аномалии в продажах</td><td>Автодетекция резкого падения/роста по точке — немедленный алерт директору</td></tr>
+            <tr><td>B2B-зависший клиент</td><td>Клиент не двигался по воронке N дней → push менеджеру с рекомендацией</td></tr>
+            <tr><td>Оптимальный план акции</td><td>Предлагает тип и размер скидки для максимального ROI на основе истории отклика</td></tr>
+            <tr><td>Коллаб-аналитика</td><td>Оценка эффективности завершённых коллабораций: срок выполнения vs план, нагрузка на команду</td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--green-light);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Ролдор боюнча дашборддор</div>
+        <table class="req-table">
+          <thead><tr><th style="width:22%;">Роль</th><th>Содержимое дашборда</th></tr></thead>
+          <tbody>
+            <tr><td>Директор (бизнес)</td><td>KPI компании, задачи всех отделов, B2B-воронка (суммарно), план/факт продаж по всем точкам, AI-блок с прогнозами и аномалиями, топ-задачи дня</td></tr>
+            <tr><td>Проект-менеджер</td><td>Все задачи по всем отделам, дедлайны (сегодня / просрочено / завтра), статистика по отделам, B2B-активность</td></tr>
+            <tr><td>Руководитель отдела</td><td>Задачи только своего отдела, прогресс % выполнения, просроченные задачи команды</td></tr>
+            <tr><td>Сотрудник</td><td>Только мои задачи, приоритеты, дедлайны, личный KPI, AI-напоминание на день</td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--green-light);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Flutter Web · Платформанын веб-сайты</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Единая кодовая база с мобильным приложением (Flutter) — все функции доступны в браузере</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td>Responsive-дизайн: десктоп / планшет / мобильный. Оптимизировано под большой экран для дашбордов</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td>Kanban-доска с полноценным drag-and-drop (мышь), массовое перемещение карточек</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>4</td><td>Расширенные дашборды: интерактивные графики на полный экран, таблицы с сортировкой, экспорт PDF/Excel</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>5</td><td>Web Push (уведомления в браузере) + PWA-режим (установка как десктопное приложение)</td><td><span class="bh">Жогору</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(82,183,136,0.06);border:1px solid rgba(82,183,136,0.15);border-radius:8px;font-size:12px;color:var(--text-muted);">
+          <strong style="color:var(--green-light);">Backend API (8 групп):</strong> Auth · Users · BusinessTasks · Calendar · B2BOrders · Sales · Reports · Analytics(AI) &nbsp;|&nbsp; <strong style="color:var(--green-light);">Стек:</strong> Flutter (iOS/Android/Web) · Node.js/NestJS · PostgreSQL · Redis · S3 · Firebase FCM · Claude/GPT LLM · CI/CD · staging+prod &nbsp;|&nbsp; <strong style="color:var(--green-light);">SLA:</strong> API &lt;200ms · 99.5% uptime · бэкапы 30 дней
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DEEP DIVE: PRODUCTION OS ═══ -->
+<div style="background:var(--dark2);">
+  <div class="container">
+    <div class="product-section">
+      <div class="ps-header">
+        <div>
+          <div class="ps-tag blue">Өндүрүштүк ОС + Kanban</div>
+          <div class="h2">Цифровой цех.<br><em>От заказа до готового изделия.</em></div>
+          <p class="body" style="max-width:520px;margin-top:12px;">Каждый рабочий — швея, закройщик, контролёр — получает мобильное приложение под свою роль. Встроенный чат заменяет WhatsApp. Встроенный AI выявляет узкие места раньше, чем они становятся проблемой.</p>
+        </div>
+        <div class="ps-price" style="border-color:rgba(91,141,184,0.25);">
+          <div class="lbl">Стоимость</div>
+          <div class="big" style="color:var(--blue);">$25K</div>
+          <div style="font-size:11px;color:var(--text-dim);margin-top:3px;">Цех · Kanban · Чат · AI</div>
+        </div>
+      </div>
+      <div class="kanban-demo">
+        <div class="k-col"><div class="k-col-t">1. Заказ</div><div class="k-card"><div style="color:var(--text-muted);font-size:10px;">Заказ #142</div><div class="k-status" style="color:var(--gold);">3 дня</div></div><div class="k-card"><div style="color:var(--text-muted);font-size:10px;">Заказ #145</div><div class="k-status" style="color:var(--green-light);">новый</div></div></div>
+        <div class="k-col"><div class="k-col-t">2. Крой</div><div class="k-card"><div style="color:var(--text-muted);font-size:10px;">Заказ #139</div><div class="k-status" style="color:var(--blue);">2/5 задач</div></div></div>
+        <div class="k-col"><div class="k-col-t">3. Пошив</div><div class="k-card"><div style="color:var(--text-muted);font-size:10px;">Заказ #137</div><div class="k-status" style="color:var(--blue);">8/12 задач</div></div><div class="k-card"><div style="color:var(--text-muted);font-size:10px;">Заказ #138</div><div class="k-status" style="color:#E07070;">просрочен</div></div></div>
+        <div class="k-col"><div class="k-col-t">4. Проверка</div><div class="k-card"><div style="color:var(--text-muted);font-size:10px;">Заказ #135</div><div class="k-status" style="color:var(--green-light);">ОТК ✓</div></div></div>
+        <div class="k-col"><div class="k-col-t">5. Готово</div><div class="k-card"><div style="color:var(--text-muted);font-size:10px;">Заказ #131</div><div class="k-status" style="color:var(--green-light);">отгружен</div></div></div>
+      </div>
+      <div class="feat-grid">
+        <div class="feat-item"><div class="fi-title">📋 Kanban · 5 этапов · WIP-лимиты</div><div class="fi-desc">Визуальная доска drag-and-drop, WIP-лимиты, цветовая маркировка. Каждый заказ движется по цеху.</div></div>
+        <div class="feat-item"><div class="fi-title">📱 Приложение рабочих · 2–3 нажатия</div><div class="fi-desc">Упрощённый UI: смена статуса задачи, фото результата, временные метки — без лишней навигации.</div></div>
+        <div class="feat-item"><div class="fi-title">💬 Встроенный real-time чат</div><div class="fi-desc">Личные сообщения, комментарии к заказам/задачам, фото дефектов — контекст привязан к заказу. Конец WhatsApp-хаоса.</div></div>
+        <div class="feat-item"><div class="fi-title">🤖 AI: Bottleneck-детекция</div><div class="fi-desc">Автоматическое выявление узкого места (теория ограничений). Прогноз срока завершения каждого заказа.</div></div>
+        <div class="feat-item"><div class="fi-title">📊 Цифровые следы · 4 типа</div><div class="fi-desc">Статус заказов, финансы, производительность каждого рабочего, запасы — в реальном времени.</div></div>
+        <div class="feat-item"><div class="fi-title">🔗 Автомост Бизнес → Kanban</div><div class="fi-desc">B2B заказ при переходе в «Производство» создаёт производственный заказ на Kanban-доске автоматически.</div></div>
+      </div>
+      <button class="prd-toggle" onclick="togglePrd(this)">📄 ТЗ — Өндүрүштүк ОС + Kanban · Полная спецификация (Kanban · Задачи · Чат · Цифровые следы · AI) <span class="arr">▼</span></button>
+      <div class="prd-body">
+
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;">
+          <div style="background:var(--dark4);border-radius:8px;padding:12px;text-align:center;border:1px solid rgba(91,141,184,0.2);">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--blue);">5</div>
+            <div style="font-size:10px;color:var(--text-dim);">Этапов Kanban</div>
+          </div>
+          <div style="background:var(--dark4);border-radius:8px;padding:12px;text-align:center;border:1px solid rgba(91,141,184,0.2);">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--blue);">4</div>
+            <div style="font-size:10px;color:var(--text-dim);">Типа цифровых следов</div>
+          </div>
+          <div style="background:var(--dark4);border-radius:8px;padding:12px;text-align:center;border:1px solid rgba(91,141,184,0.2);">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--blue);">6</div>
+            <div style="font-size:10px;color:var(--text-dim);">AI-функций цеха</div>
+          </div>
+          <div style="background:var(--dark4);border-radius:8px;padding:12px;text-align:center;border:1px solid rgba(91,141,184,0.2);">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--blue);">8+</div>
+            <div style="font-size:10px;color:var(--text-dim);">Push-триггеров</div>
+          </div>
+        </div>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 1 — Kanban-конвейер · цехтин 5 этабы</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Визуальная Kanban-доска с колонками-этапами: 1.Заказ → 2.Крой → 3.Пошив → 4.Проверка/ОТК → 5.Готово. Количество заказов и прогресс задач на каждом этапе.</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td>Drag-and-drop перемещение заказа между этапами — с автоматическим push всем участникам этапа</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td>WIP-лимиты (Work In Progress): максимальное кол-во заказов на этапе — основа теории ограничений. При превышении — алерт менеджеру.</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>4</td><td>Цветовая маркировка карточек: 🟢 в срок · 🟡 риск просрочки · 🔴 просрочен · ⚪ новый</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>5</td><td>AI-индикатор «узкого места» (bottleneck): этап с наибольшей задержкой выделяется автоматически</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>6</td><td>Настройка этапов администратором: название, порядок, WIP-лимит, добавление/удаление этапа без перепрограммирования</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>7</td><td>Автоприём заказа из B2B-контура: когда B2B-заказ переходит в стадию «Производство» — заказ на Kanban создаётся автоматически со всеми параметрами</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>8</td><td>Обратная синхронизация: прогресс Kanban (Крой → Пошив → Проверка → Готово) отображается в B2B-карточке — менеджер видит без звонков в цех</td><td><span class="bh">Жогору</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 2 — Өндүрүшкө заказдар</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>CRUD производственных заказов: название, описание, менеджер, дедлайн, количество изделий, приоритет</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td>Детальная карточка заказа: прогресс задач %, комментарии, прикреплённые файлы (лекала, образцы), история изменений</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td>Список заказов с фильтрацией по этапу, менеджеру, дедлайну, статусу — для быстрого поиска нужного</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>4</td><td>Прикрепление фото/файлов к заказу: лекала, технические рисунки, образцы ткани, фото дефектов</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>5</td><td>AI-прогноз срока завершения заказа на основе текущей скорости и загрузки этапов</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 3 — Жумушчулардын тапшырмалары (мобильное приложение для каждого сотрудника цеха)</div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Создание задачи с привязкой к заказу и этапу Kanban-доски (кройка / пошив / ОТК)</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td>Назначение задачи конкретному рабочему (швея, закройщик, контролёр) с дедлайном</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td>Статусы: Ожидание → В работе → Завершено. Смена статуса рабочим — 2–3 нажатия, не больше. Максимальная простота.</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>4</td><td>Упрощённый UI для рабочего: только его задачи, крупные кнопки, минимум текста. Адаптировано под человека у швейной машины.</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>5</td><td>Push рабочему при назначении новой задачи; push менеджеру при завершении задачи рабочим</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>6</td><td>Фото результата работы: рабочий делает фото готового изделия/операции прямо из приложения</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>7</td><td>Временные метки: автоматическая фиксация времени начала и завершения задачи — основа цифровых следов</td><td><span class="bm">Орто</span></td></tr>
+            <tr><td>8</td><td>Авто-генерация задач при создании заказа по шаблонам типа изделия — менеджер не создаёт задачи вручную</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 4 — Курулган real-time чат (ключевое отличие от всех существующих решений)</div>
+        <div style="padding:10px 14px;background:rgba(91,141,184,0.08);border:1px solid rgba(91,141,184,0.2);border-radius:8px;font-size:12px;color:var(--text-muted);margin-bottom:12px;">
+          <strong style="color:var(--blue);">Главная боль существующих Kanban-систем:</strong> коммуникация ведётся в WhatsApp/Telegram — контекст теряется, обсуждение дефекта по заказу №142 рассыпано по разным чатам. Cool Group решает это встроенным чатом, привязанным к заказам и задачам.
+        </div>
+        <table class="req-table">
+          <thead><tr><th style="width:4%;">#</th><th>Требование</th><th style="width:90px;">Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Real-time личные сообщения (WebSocket): менеджер ↔ рабочий, директор ↔ менеджер — без WhatsApp</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>2</td><td>Комментарии к заказу: обсуждение дефекта, уточнение лекала — всё хранится в контексте конкретного заказа</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>3</td><td>Комментарии к задаче: вопрос рабочего по операции — ответ менеджера прямо в задаче, не в отдельном чате</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>4</td><td>Отправка фото/файлов в чат: фото дефекта, образца, лекала — с привязкой к заказу</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>5</td><td>Статус прочтения сообщений, push о новых сообщениях</td><td><span class="bh">Жогору</span></td></tr>
+            <tr><td>6</td><td>Справочник сотрудников с быстрым поиском по роли, отделу, имени для начала диалога</td><td><span class="bm">Орто</span></td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 5 — Санарип издер · Реалдуу убакытта мониторинг</div>
+        <table class="req-table">
+          <thead><tr><th style="width:28%;">Тип данных</th><th>Что отслеживается в реальном времени</th><th style="width:22%;">Кому доступно</th></tr></thead>
+          <tbody>
+            <tr><td>Статус заказов</td><td>На каком этапе Kanban каждый заказ, % выполнения задач, сколько дней осталось до дедлайна, риск просрочки</td><td>Менеджер, Директор</td></tr>
+            <tr><td>Финансовые показатели</td><td>Затраты на этап, себестоимость заказа, расход материалов по заказу</td><td>Директор</td></tr>
+            <tr><td>Производительность</td><td>Скорость каждого рабочего (задачи/смена), среднее время на операцию, сравнение с нормой</td><td>Менеджер, Директор</td></tr>
+            <tr><td>Управление запасами</td><td>Остатки ткани/фурнитуры по видам, расход по заказам, автоалерт при достижении минимального порога</td><td>Менеджер, Директор</td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Модуль 6 — Өндүрүш AI-аналитикасы · 6 функция</div>
+        <table class="req-table">
+          <thead><tr><th style="width:30%;">AI-функция</th><th>Описание и ценность</th></tr></thead>
+          <tbody>
+            <tr><td>Bottleneck-детекция</td><td>Какой этап Kanban систематически тормозит производство (теория ограничений). Алерт при обнаружении узкого места.</td></tr>
+            <tr><td>Прогноз сроков заказа</td><td>На основе истории и текущей скорости — дата завершения каждого заказа. Обновляется в реальном времени.</td></tr>
+            <tr><td>Оптимизация нагрузки</td><td>Рекомендации по перераспределению задач между рабочими для выравнивания загрузки</td></tr>
+            <tr><td>Раннее предупреждение</td><td>Push директору/менеджеру при обнаружении риска просрочки заказа — за 1–2 дня до дедлайна</td></tr>
+            <tr><td>Еженедельные LLM-отчёты</td><td>Автоотчёт по производству: выполнение, эффективность, тренды, рекомендации — генерируется языковой моделью</td></tr>
+            <tr><td>Производительность рабочих</td><td>Анализ скорости по каждому рабочему, этапу, типу изделия. Выявление лучших практик для обучения.</td></tr>
+          </tbody>
+        </table>
+
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin:14px 0 8px;">Ролдор боюнча өндүрүш дашборддору</div>
+        <table class="req-table">
+          <thead><tr><th style="width:22%;">Роль</th><th>Содержимое дашборда</th></tr></thead>
+          <tbody>
+            <tr><td>Директор (произв.)</td><td>Kanban-обзор всех заказов, KPI цеха, загрузка каждого этапа %, bottleneck-индикатор, финансы по заказам, AI-блок с прогнозами</td></tr>
+            <tr><td>Менеджер</td><td>Мои заказы на Kanban, задачи с дедлайнами, рабочие с текущими задачами, AI-подсказки по распределению</td></tr>
+            <tr><td>Рабочий</td><td>Только мои задачи, кнопки смены статуса, чат с менеджером. Максимально простой интерфейс.</td></tr>
+          </tbody>
+        </table>
+
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(91,141,184,0.06);border:1px solid rgba(91,141,184,0.15);border-radius:8px;font-size:12px;color:var(--text-muted);">
+          <strong style="color:var(--blue);">Backend API (8 групп):</strong> Orders · Stages · Tasks · Inventory · Chat · Comments · Files · Analytics(AI) &nbsp;|&nbsp; <strong style="color:var(--blue);">Real-time:</strong> WebSocket (чат + Kanban live-обновления &lt;500ms) · Firebase FCM &nbsp;|&nbsp; <strong style="color:var(--blue);">AI/ML:</strong> Регрессия (прогноз сроков) · Bottleneck-детекция · Claude/GPT LLM (отчёты) · Cron-задачи (ежедневно/еженедельно)
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAYMENT ═══ -->
+<section id="payment" class="sec" style="background:var(--dark);">
+  <div class="container">
+    <div class="eyebrow">График платежей</div>
+    <div class="h1">Төрт төлөм.<br><em>Ар бири натыйжага байланган.</em></div>
+    <p class="body" style="max-width:520px;margin-top:14px;">Сиз ар бир контролдук этаптын аяктагандан кийин гана төлөйсүз. Бош жерге аванс жок — ар бир төлөм кабыл алынган натыйжага байланган.</p>
+    <div class="payment-grid">
+      <div class="pay-card"><div class="pay-n">01</div><div class="pay-lbl">Старт</div><div class="pay-trigger">Договорго кол коюлганда аванс. Үч продуктунун баарынын бир учурда дароо старты.</div><div class="pay-amount">$20,000</div></div>
+      <div class="pay-card"><div class="pay-n">02</div><div class="pay-lbl">MVP Toolor + Бизнес ОС Демосу</div><div class="pay-trigger">Toolor App MVP'ин (лоялдуулук + каталог) жана Бизнес-операциялар демонстрациясын кабыл алгандан кийин. Кабыл алуу акты.</div><div class="pay-amount">$20,000</div></div>
+      <div class="pay-card"><div class="pay-n">03</div><div class="pay-lbl">Үчөөнүн акыркы тапшыруусу</div><div class="pay-trigger">QA аяктады. Үч продуктунун баштапкы коду, кирүү ачкычтары, документация берилет.</div><div class="pay-amount">$20,000</div></div>
+      <div class="pay-card final"><div class="pay-n">04</div><div class="pay-lbl g">Toolor Live · App Store</div><div class="pay-trigger">Toolor App'тын App Store жана Google Play'де ийгиликтүү жарыялангандан жана production'до иштешин тастыктагандан кийин.</div><div class="pay-amount g">$7,000</div></div>
+    </div>
+    <div style="margin-top:24px;background:rgba(82,183,136,0.06);border:1px solid rgba(82,183,136,0.15);border-radius:12px;padding:18px 22px;">
+      <p style="font-size:13px;color:var(--text-muted);line-height:1.6;"><span style="color:var(--green-light);font-weight:600;">Толук оплатадан кийин:</span> толук баштапкы код (iOS · Android · Web · Backend · AI), ИС укуктары, бардык ачкычтар жана сертификаттар, документация, App Store жана Google Play аккаунттары — баары толугу менен сиздики. <span style="color:var(--text-dim);">Сумма үлүштөн толугу менен бөлүнгөн.</span></p>
+    </div>
+    <div class="guar-grid">
+      <div class="guar-card"><div class="guar-icon">🔐</div><div class="guar-title">Баштапкы код сиздики</div><div class="guar-desc">Код, ИС жана кирүүнүн толук берилиши</div></div>
+      <div class="guar-card"><div class="guar-icon">🛡</div><div class="guar-title">30 күн кепилдик</div><div class="guar-desc">Критикалык баттарды бекер оңдоо</div></div>
+      <div class="guar-card"><div class="guar-icon">📡</div><div class="guar-title">Жумалык демолор</div><div class="guar-desc">Git, таск-трекер, команда менен Telegram</div></div>
+      <div class="guar-card"><div class="guar-icon">⚡</div><div class="guar-title">SLA 99.5% uptime</div><div class="guar-desc">API &lt;200ms · WebSocket &lt;100ms</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SAAS ═══ -->
+<section id="saas" class="sec" style="background:var(--dark2);">
+  <div class="container">
+    <div class="eyebrow">SaaS мүмкүнчүлүгү</div>
+    <div class="h1">Сиз үчүн курабыз.<br><em>Бүт тармакка сатабыз.</em></div>
+    <p class="body" style="max-width:640px;margin-top:14px;">Cool Group'тагы бир иштеген мисал — эң жакшы сатуу аргументи. Болгону КГ + ӨЗ: 2,500+ фабрика жана миңдеген жергиликтүү бренддер атайын ПОсуз. Баарына бир эмес — кичинекей ателье'ден холдингге чейин төрт деңгээл.</p>
+
+    <div class="saas-tier-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px;">
+
+      <div style="background:var(--dark3);border-radius:16px;padding:22px 18px;border:1px solid rgba(255,255,255,0.06);position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);"></div>
+        <div style="font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px;">STARTER</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-bottom:14px;min-height:48px;">Кичинекей ателье, 20 кишиге чейин цех, жергиликтүү кийим бренди</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--text);letter-spacing:1px;line-height:1;">$99</div>
+        <div style="font-size:10px;color:var(--text-dim);margin-bottom:14px;">/ай · жазылуу</div>
+        <div style="font-size:11px;color:var(--text-muted);line-height:1.5;">Toolor-сыяктуу лоялдуулук + негизги каталог + жөнөкөй аналитика. Kanban өндүрүшсүз.</div>
+        <div style="margin-top:12px;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;color:var(--text-dim);letter-spacing:1px;">Рынок: 1,000+ майда цех КГ+ӨЗ</div>
+      </div>
+
+      <div style="background:var(--dark3);border-radius:16px;padding:22px 18px;border:1px solid rgba(82,183,136,0.2);position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--green-light),transparent);"></div>
+        <div style="font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green-light);margin-bottom:10px;">GROWTH</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-bottom:14px;min-height:48px;">Орто фабрика 20–100 киши, өз өндүрүшү бар бренд</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--green-light);letter-spacing:1px;line-height:1;">$499</div>
+        <div style="font-size:10px;color:var(--text-dim);margin-bottom:14px;">/ай · жазылуу</div>
+        <div style="font-size:11px;color:var(--text-muted);line-height:1.5;">Толук Kanban өндүрүш + бизнес тапшырмалар + B2B воронка + аналитика. AI пакетсиз.</div>
+        <div style="margin-top:12px;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;color:var(--text-dim);letter-spacing:1px;">Рынок: 800+ орто фабрика</div>
+      </div>
+
+      <div style="background:linear-gradient(140deg,rgba(201,168,76,0.07),var(--dark3));border-radius:16px;padding:22px 18px;border:1px solid rgba(201,168,76,0.3);position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);"></div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+          <div style="font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">PROFESSIONAL</div>
+          <div style="background:rgba(201,168,76,0.2);color:var(--gold);font-family:'Syne',sans-serif;font-size:8px;font-weight:700;padding:2px 7px;border-radius:4px;">СУНУШТАЙБЫЗ</div>
+        </div>
+        <div style="font-size:12px;color:var(--text-muted);margin-bottom:14px;min-height:48px;">Чоң фабрика 100–500 киши, активдүү B2B, Wildberries жеткирүүчүсү</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--gold-light);letter-spacing:1px;line-height:1;">$1,499</div>
+        <div style="font-size:10px;color:var(--text-dim);margin-bottom:14px;">/ай · жазылуу</div>
+        <div style="font-size:11px;color:var(--text-muted);line-height:1.5;">Толук платформа + AI пакет + Toolor App + приоритеттүү колдоо. Cool Group аналогу.</div>
+        <div style="margin-top:12px;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;color:var(--text-dim);letter-spacing:1px;">Рынок: 300+ чоң фабрика КГ+ӨЗ</div>
+      </div>
+
+      <div style="background:var(--dark3);border-radius:16px;padding:22px 18px;border:1px solid rgba(91,141,184,0.2);position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue),transparent);"></div>
+        <div style="font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:10px;">ENTERPRISE</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-bottom:14px;min-height:48px;">Холдинг, 500+ киши, бир нече фабрика, тышкы рынокко экспорт</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--blue);letter-spacing:1px;line-height:1;">$30K</div>
+        <div style="font-size:10px;color:var(--text-dim);margin-bottom:14px;">бир жолу + $2,000/ай</div>
+        <div style="font-size:11px;color:var(--text-muted);line-height:1.5;">Лицензия + white-label + кастомизация + бөлүнгөн менеджер + SLA 99.9%.</div>
+        <div style="margin-top:12px;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;color:var(--text-dim);letter-spacing:1px;">Рынок: 50+ холдинг региону</div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:40px;">
+      <div class="eyebrow">Киреше проекциясы · 1-жыл</div>
+      <div class="h2" style="margin-bottom:20px;">Аралаш модель: <em>$99/айдан $30K лицензияга чейин.</em></div>
+    </div>
+
+    <div class="rev-hero">
+      <div>
+        <div class="rev-lbl">Консервативдүү максат · 1-жыл</div>
+        <div class="rev-big"><sub>$</sub>487K</div>
+      </div>
+      <div style="width:1px;height:70px;background:rgba(201,168,76,0.2);"></div>
+      <div class="rev-desc">Аралаш портфель: кичи жана орто бизнестин жазылуулары туруктуу MRR берет; Professional жана Enterprise — чоң чектер.</div>
+      <div class="rev-bars" style="padding-bottom:20px;">
+        <div class="rev-bar-wrap"><div class="rev-bar" style="height:22px;background:rgba(255,255,255,0.15);border-radius:5px 5px 0 0;position:relative;"><span class="rbv">Starter</span></div><span style="font-size:9px;color:var(--text-dim);">$99/ай</span></div>
+        <div class="rev-bar-wrap"><div class="rev-bar" style="height:36px;background:rgba(82,183,136,0.4);border-radius:5px 5px 0 0;position:relative;"><span class="rbv">Growth</span></div><span style="font-size:9px;color:var(--text-dim);">$499/ай</span></div>
+        <div class="rev-bar-wrap"><div class="rev-bar" style="height:64px;background:rgba(201,168,76,0.55);border-radius:5px 5px 0 0;position:relative;"><span class="rbv">Pro</span></div><span style="font-size:9px;color:var(--text-dim);">$1,499/ай</span></div>
+        <div class="rev-bar-wrap"><div class="rev-bar" style="height:80px;background:rgba(91,141,184,0.5);border-radius:5px 5px 0 0;position:relative;"><span class="rbv">Enterprise</span></div><span style="font-size:9px;color:var(--text-dim);">$30K+</span></div>
+      </div>
+    </div>
+
+    <table class="rev-table" style="margin-top:20px;">
+      <thead><tr><th>Тариф</th><th>Кардарлар саны (1-жыл)</th><th>Баа</th><th>MRR / бир жолу</th><th>Жылдык киреше</th></tr></thead>
+      <tbody>
+        <tr><td>Starter · $99/ай</td><td>30 кардар</td><td>$99/ай</td><td>$2,970/ай MRR</td><td class="hl">$35,640</td></tr>
+        <tr><td>Growth · $499/ай</td><td>15 кардар</td><td>$499/ай</td><td>$7,485/ай MRR</td><td class="hl">$89,820</td></tr>
+        <tr><td>Professional · $1,499/ай</td><td>8 кардар</td><td>$1,499/ай</td><td>$11,992/ай MRR</td><td class="hl">$143,904</td></tr>
+        <tr><td>Enterprise · лицензия</td><td>3 кардар</td><td>$30K + $2K/ай</td><td>$6,000/ай + $90K бир жолу</td><td class="hl">$162,000</td></tr>
+        <tr class="tr-tot"><td colspan="3" style="font-size:11px;font-weight:400;color:var(--text-dim);">Жыйынды · консервативдүү · 1-жыл (56 кардар)</td><td style="font-size:11px;color:var(--text-dim);">$28,447/ай MRR</td><td class="hl" style="font-size:16px;">$431,364</td></tr>
+        <tr class="tr-tot"><td colspan="3" style="font-size:11px;font-weight:400;color:var(--text-dim);">Оптимисттик · 2-жыл (150+ кардар аралаш)</td><td style="font-size:11px;color:var(--text-dim);">$80K+ MRR</td><td class="hl" style="font-size:16px;">$1.2M+</td></tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+      <div style="background:var(--dark3);border-radius:10px;padding:14px 16px;border:1px solid rgba(255,255,255,0.05);">
+        <div style="font-family:'Syne',sans-serif;font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">Тез MRR старты</div>
+        <div style="font-size:12.5px;color:var(--text-muted);">Starter жана Growth бир чалуудан сатылат — кириш тоскоолдугу төмөн, база тез топтолот</div>
+      </div>
+      <div style="background:var(--dark3);border-radius:10px;padding:14px 16px;border:1px solid rgba(255,255,255,0.05);">
+        <div style="font-family:'Syne',sans-serif;font-size:9px;color:var(--green-light);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">Өсүүдө апсейл</div>
+        <div style="font-size:12.5px;color:var(--text-muted);">Кардар $99 менен баштайт → фабрика өсөт → Professional'га өтөт. NRR > 120%.</div>
+      </div>
+      <div style="background:var(--dark3);border-radius:10px;padding:14px 16px;border:1px solid rgba(255,255,255,0.05);">
+        <div style="font-family:'Syne',sans-serif;font-size:9px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">Жалпы маржа 75%+</div>
+        <div style="font-size:12.5px;color:var(--text-muted);">Инфраструктура Cool Group тарабынан төлөнгөн. Ар бир жаңы кардар дээрлик таза пайда.</div>
+      </div>
+    </div>
+
+    <div class="mkt-grid">
+      <div class="mkt-card"><div style="font-family:'Syne',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">🇰🇬 Кыргызстан</div><div class="mkt-stat">500+</div><div style="font-size:12px;color:var(--text-muted);">Катталган тигүүчүлүк ишканалары. Бишкек — Борбордук Азиянын өндүрүш хабы.</div></div>
+      <div class="mkt-card"><div style="font-family:'Syne',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">🇺🇿 Өзбекстан</div><div class="mkt-stat">2,000+</div><div style="font-size:12px;color:var(--text-muted);">Кийим фабрикалары. Өкмөт 2020-жылдан бери модернизацияны колдойт. ОАнын эң ири рыногу.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EQUITY ═══ -->
+<section id="equity" class="sec" style="background:var(--dark);">
+  <div class="container">
+    <div class="eyebrow">Өнөктөштүк структурасы</div>
+    <div class="h1">Тең сооснователлер.<br><em>ПО боюнча келишимден өзүнчө.</em></div>
+    <div class="eq-layout">
+      <div>
+        <div class="pie-wrap">
+          <svg width="240" height="240" viewBox="0 0 240 240">
+            <circle cx="120" cy="120" r="90" fill="none" stroke="#C9A84C" stroke-width="26" stroke-dasharray="169.6 565.5" stroke-dashoffset="0"/>
+            <circle cx="120" cy="120" r="90" fill="none" stroke="#2D6A4F" stroke-width="26" stroke-dasharray="169.6 565.5" stroke-dashoffset="-169.6"/>
+            <circle cx="120" cy="120" r="90" fill="none" stroke="#5B8DB8" stroke-width="26" stroke-dasharray="169.6 565.5" stroke-dashoffset="-339.3"/>
+            <circle cx="120" cy="120" r="90" fill="none" stroke="#2a2a3a" stroke-width="26" stroke-dasharray="56.5 565.5" stroke-dashoffset="-508.9"/>
+          </svg>
+          <div class="pie-center"><span class="pn">3×30%</span><span class="pl">Тең негиздөөчүлөр</span></div>
+        </div>
+        <div class="eq-legend">
+          <div class="eq-item"><div class="eq-dot" style="background:var(--gold);"></div><div class="eq-text">Техникалык сооснователлер (иштеп чыгуу команда)</div><div class="eq-pct" style="color:var(--gold);">30%</div></div>
+          <div class="eq-item"><div class="eq-dot" style="background:var(--green);"></div><div class="eq-text">Сооснователь · Бизнес-девелопмент & Стратегия</div><div class="eq-pct" style="color:var(--green-light);">30%</div></div>
+          <div class="eq-item"><div class="eq-dot" style="background:var(--blue);"></div><div class="eq-text">Cool Group CEO</div><div class="eq-pct" style="color:var(--blue);">30%</div></div>
+          <div class="eq-item"><div class="eq-dot" style="background:#2a2a3a;border:1px solid #555;"></div><div class="eq-text">Опцион пулу (инвесторлор)</div><div class="eq-pct" style="color:var(--text-dim);">10%</div></div>
+        </div>
+      </div>
+      <div class="term-cards">
+        <div class="term-card"><h4>🔑 Үлүш акысыз берилет</h4><p>Негиздөөчүнүн үлүшү — без дополнительных затрат, полностью отдельно от $67K. ПОго инвестиция даёт платформу мирового уровня. Доля — за роль сооснователя.</p></div>
+        <div class="term-card g"><h4>🌱 Жаңы юридикалык жак</h4><p>Өзүнчө SaaS компания акыркы тапшыруудан кийин катталат. Таза кап-таблица, үч тең сооснователь, 10% опцион пулу. Cool Group жана SaaS юридикалык жактан эркин.</p></div>
+        <div class="term-card b"><h4>📅 Вестинг · 2 жыл · Клифф 6 ай</h4><p>Бардык үч сооснователь үчүн бирдей график. Активдүү катышуусуз эч ким үлүш менен кете албайт. Все вестятся синхронно.</p></div>
+        <div class="sep-note"><strong style="color:var(--gold);">SaaS компаниядагы CEO ролу:</strong> Тармактык кеңешчи жана коммерциялык сооснователь — продуктка салым, биринчи кардарлар үчүн тармак, инвесторлорго co-питчинг. Продукт жол картасына оперативдик контролсуз.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY ═══ -->
+<section id="why" class="sec" style="background:var(--dark2);">
+  <div class="container">
+    <div class="eyebrow">Стратегиялык логика</div>
+    <div class="h1">Бул башкалар жете алган жерде<br><em>жеңет.</em></div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon" style="background:rgba(201,168,76,0.1);">🏆</div><div><h4>Неподдельная репутация</h4><p>КГ жана ӨЗдөгү ар бир фабрика ээси Cool Group'ту билет. CEO «биз бул платформаны колдонобуз» деп айтканда — демонстрацияга чейин эле сатуу жарымы жабылат.</p></div></div>
+      <div class="why-card"><div class="why-icon" style="background:rgba(82,183,136,0.1);">🧪</div><div><h4>Реальное боевое тестирование</h4><p>Платформа рынокко чыкканга чейин региондогу эң татаал өндүрүштө сыналат. Бул акчага сатып алгыс продукт артыкчылыгы.</p></div></div>
+      <div class="why-card"><div class="why-icon" style="background:rgba(91,141,184,0.1);">🌐</div><div><h4>Дистрибуция через сеть контактов</h4><p>Wildberries, Uzum, OZON — Cool Group'тун БДБ кийим экосистемасы боюнча байланыштары бар. CEO'нун дефтери — биринчи 10 кардарга GTM стратегиясы.</p></div></div>
+      <div class="why-card"><div class="why-icon" style="background:rgba(201,168,76,0.1);">💡</div><div><h4>Отраслевые знания, которые не загуглить</h4><p>Толук тигүүчүлүк циклин жылдар бою башкаруу — CEO кайсы функциялар маанилүү, кайсылары жагымдуу экенин жана масштабда реалдуу оорулуу жерлер кайда экенин так билет.</p></div></div>
+    </div>
+    <div class="quote-block">
+      <div class="q-mark">"</div>
+      <div class="q-text">Вертикалдуу B2B ПОну сатуунун эң кыйын жери аны иштеп чыгуу эмес — реалдуу дүйнөдө иштейт экенин далилдөө. Cool Group бул маселени биринчи күндөн эле толугу менен чечет.</div>
+      <div class="q-attr">— Өнөктөштүктүн стратегиялык негиздемеси</div>
+    </div>
+    <div class="comp-table">
+      <div class="row"><div class="col-head">Существующие решения</div><div class="col-head" style="color:var(--green-light);background:rgba(82,183,136,0.05);">Cool Group × Vertical OS</div></div>
+      <div class="row"><div class="col comp-neg">✗ Коммуникация жок — баары WhatsApp'та, контекст жоголот</div><div class="col comp-pos">✓ Курулган real-time чат, контекст заказга байланган</div></div>
+      <div class="row"><div class="col comp-neg">✗ Бизнес-контур жок (B2B, сатуу, бөлүмдөр)</div><div class="col comp-pos">✓ Толук бизнес-контур — воронка, тапшырмалар, AI</div></div>
+      <div class="row"><div class="col comp-neg">✗ Бизнес → өндүрүш автокөпүрүсү жок</div><div class="col comp-pos">✓ Автоматтык көпүрү: B2B заказ → Kanban</div></div>
+      <div class="row"><div class="col comp-neg">✗ Сатып алуучулар үчүн колдонмо жок (B2C)</div><div class="col comp-pos">✓ Toolor App — B2C лоялдуулук + магазин</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TEAM ═══ -->
+<section id="team" class="sec-sm" style="background:var(--dark);">
+  <div class="container">
+    <div class="eyebrow">Долбоор командасы</div>
+    <div class="h2">Платформаны <em>ким куруп жатат.</em></div>
+    <div class="team-grid" style="margin-top:26px;">
+      <div class="team-card"><div class="team-role">Flutter · Senior</div><div class="team-name">Flutter-разработчик</div><div class="team-desc">Архитектура, BLoC, Kanban-board, Toolor App, ядро платформы</div></div>
+      <div class="team-card"><div class="team-role">Flutter · Middle</div><div class="team-name">Flutter-разработчик</div><div class="team-desc">Экраны, UI-компоненты, интеграция API, анимации</div></div>
+      <div class="team-card"><div class="team-role">Backend · Senior</div><div class="team-name">Backend-разработчик</div><div class="team-desc">REST API, PostgreSQL, WebSocket, инфраструктура, CI/CD</div></div>
+      <div class="team-card"><div class="team-role">Backend · Middle</div><div class="team-name">Backend-разработчик</div><div class="team-desc">Эндпоинты, миграции, push-сервис, Loyalty API, Inventory</div></div>
+      <div class="team-card"><div class="team-role">AI / ML Engineer</div><div class="team-name">AI-инженер</div><div class="team-desc">ML-модели, bottleneck-детекция, прогнозы, LLM-интеграция</div></div>
+      <div class="team-card"><div class="team-role">QA + PM</div><div class="team-name">QA-инженер + PM</div><div class="team-desc">Тестирование, координация, еженедельные демо</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NEXT STEPS ═══ -->
+<section id="next" class="sec" style="background:var(--dark2);">
+  <div class="container">
+    <div class="eyebrow">Кийинки кадамдар</div>
+    <div class="h1">Мунун баарын бирге<br><em>баштоо үчүн үч кадам.</em></div>
+    <div class="steps-grid">
+      <div class="step-card"><div class="step-n">01</div><svg width="28" height="28" viewBox="0 0 28 28" fill="none" style="margin:0 auto 10px;display:block;"><rect x="4" y="4" width="20" height="24" rx="3" fill="rgba(201,168,76,0.1)" stroke="rgba(201,168,76,0.4)" stroke-width="1.5"/><line x1="8" y1="10" x2="20" y2="10" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/><line x1="8" y1="14" x2="20" y2="14" stroke="rgba(201,168,76,0.3)" stroke-width="1"/><line x1="8" y1="18" x2="16" y2="18" stroke="rgba(201,168,76,0.3)" stroke-width="1"/><path d="M17 22 L22 17 L24 19 L19 24 Z" fill="rgba(201,168,76,0.5)" stroke="rgba(201,168,76,0.8)" stroke-width=".5"/></svg><h4>Согласовать и подписать</h4><p>ПО боюнча договор шарттары ($67K) + сооснователлер меморандуму. Эки документ тең өзүнчө жана түшүнүктүү. 1-төлөм үч агымдын баарын бир учурда иштетет.</p></div>
+      <div class="step-card"><div class="step-n">02</div><svg width="28" height="28" viewBox="0 0 28 28" fill="none" style="margin:0 auto 10px;display:block;"><rect x="2" y="6" width="24" height="18" rx="3" fill="rgba(82,183,136,0.1)" stroke="rgba(82,183,136,0.4)" stroke-width="1.5"/><path d="M10 12 L6 14 L10 16" stroke="rgba(82,183,136,0.7)" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M18 12 L22 14 L18 16" stroke="rgba(82,183,136,0.7)" stroke-width="1.5" fill="none" stroke-linecap="round"/><line x1="15" y1="11" x2="13" y2="17" stroke="rgba(201,168,76,0.6)" stroke-width="1.5"/></svg><h4>Три потока · Пять месяцев</h4><p>Toolor App, бизнес-операции и производственная ОС строятся одновременно. Жумалык демолор, полная прозрачность. Вся обратная связь от Cool Group учитывается в реальном времени.</p></div>
+      <div class="step-card"><div class="step-n">03</div><svg width="28" height="28" viewBox="0 0 28 28" fill="none" style="margin:0 auto 10px;display:block;"><path d="M14 4 Q18 4 20 8 L22 16 L16 18 L14 24 L12 18 L6 16 L8 8 Q10 4 14 4 Z" fill="rgba(91,141,184,0.15)" stroke="rgba(91,141,184,0.5)" stroke-width="1.5"/><circle cx="14" cy="11" r="3" fill="rgba(91,141,184,0.4)" stroke="rgba(91,141,184,0.7)" stroke-width="1"/><path d="M8 18 L5 22" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" stroke-linecap="round"/><path d="M20 18 L23 22" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" stroke-linecap="round"/></svg><h4>Запуск · SaaS · Продажи</h4><p>Үч продукт бирге чыгат. SaaS компания катталат. Үч тең сооснователь. Биринчи кардарлар CEO тармагынан.</p></div>
+    </div>
+    <div class="cta-banner">
+      <div>
+        <h3>Cool Group — биринчи кардар <em>жана бүт тармакты трансформациялаган</em> платформанын биргелешкен ээси. Бир эле учурда.</h3>
+      </div>
+      <div class="cta-right">
+        <div class="cta-inv"><div class="lbl">Сиздин инвестиция</div><div class="val" style="color:var(--gold-light);">$67,000</div></div>
+        <div class="cta-inv"><div class="lbl">Сиздин үлүш — акысыз</div><div class="val" style="color:var(--green-light);">30%</div></div>
+        <button class="btn-primary">Давайте строить вместе →</button>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:22px;">
+      <svg width="300" height="18" viewBox="0 0 300 18" style="display:block;margin:0 auto 8px;"><path d="M10 9 Q75 3 150 9 Q225 15 290 9" stroke="rgba(201,168,76,0.16)" stroke-width="1" fill="none" stroke-dasharray="4,5"/><circle cx="10" cy="9" r="3" fill="rgba(201,168,76,0.22)"/><ellipse cx="293" cy="9" rx="5" ry="3" fill="none" stroke="rgba(201,168,76,0.22)" stroke-width="1"/></svg>
+      <p style="font-size:10px;color:var(--text-dim);letter-spacing:2px;font-family:'Syne',sans-serif;text-transform:uppercase;">Купуя · Cool Group × Vertical OS · Март 2026 · 30 күн колдонулат</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-brand">CG × VOS · Vertical OS Platform · 2026</div>
+  <div class="f-conf">Купуя. Таратуу үчүн эмес.</div>
+</footer>
+
+<script>
+function togglePrd(btn){
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', ()=>{
+  let current = '';
+  document.querySelectorAll('section[id]').forEach(s=>{
+    if(s.getBoundingClientRect().top < 100) current = s.id;
+  });
+  navLinks.forEach(a=>{
+    const isActive = a.getAttribute('href') === '#'+current;
+    a.style.color = isActive ? 'var(--gold)' : '';
+    a.classList.toggle('active', isActive);
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cool Group × Vertical OS — 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100%;overflow:hidden;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:#08090C;
+  color:#F0EDE6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  position:relative;
+}
+
+/* Fabric weave */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(201,168,76,0.015) 3px,rgba(201,168,76,0.015) 4px),
+    repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(201,168,76,0.015) 3px,rgba(201,168,76,0.015) 4px);
+  pointer-events:none;z-index:0;
+}
+
+/* Orbs */
+.orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;}
+.orb1{width:70vw;height:70vw;max-width:700px;max-height:700px;
+  background:radial-gradient(circle,rgba(201,168,76,0.09) 0%,transparent 65%);
+  top:-15%;right:-15%;}
+.orb2{width:60vw;height:60vw;max-width:600px;max-height:600px;
+  background:radial-gradient(circle,rgba(45,106,79,0.1) 0%,transparent 70%);
+  bottom:-10%;left:-10%;}
+
+/* Stitch border */
+.stitch{position:fixed;inset:14px;border:1px dashed rgba(201,168,76,0.1);border-radius:6px;pointer-events:none;z-index:1;}
+
+/* Main container */
+.wrap{
+  position:relative;z-index:2;
+  width:100%;max-width:960px;
+  padding:40px 24px;
+  display:flex;flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/* Logos */
+.logos{display:flex;align-items:center;gap:14px;margin-bottom:52px;}
+.chip{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:12px;font-weight:800;}
+.chip-cg{background:linear-gradient(135deg,#1E2530,#2D3748);border:1px solid rgba(201,168,76,0.4);color:#C9A84C;}
+.chip-vos{background:linear-gradient(135deg,#2D6A4F,#1a4030);color:#fff;}
+.chip-x{font-family:'Playfair Display',serif;font-size:20px;color:rgba(240,237,230,0.25);}
+
+/* Eyebrow */
+.eyebrow{
+  font-family:'Syne',sans-serif;font-size:10px;font-weight:700;
+  letter-spacing:4px;text-transform:uppercase;
+  color:#C9A84C;margin-bottom:20px;
+  display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before,.eyebrow::after{content:'';flex:1;max-width:40px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.4),transparent);}
+
+/* Headline */
+.headline{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(32px,6vw,68px);
+  font-weight:900;line-height:1.05;
+  letter-spacing:-1px;margin-bottom:16px;
+}
+.headline em{font-style:italic;color:#E8C96A;}
+
+/* Subline */
+.sub{
+  font-size:clamp(14px,2vw,17px);
+  line-height:1.7;color:rgba(240,237,230,0.5);
+  font-weight:300;max-width:520px;margin-bottom:52px;
+}
+
+/* Key stats row */
+.stats{
+  display:flex;gap:32px;align-items:center;
+  margin-bottom:64px;flex-wrap:wrap;justify-content:center;
+}
+.stat{text-align:center;}
+.stat-val{
+  font-family:'Bebas Neue',sans-serif;font-size:32px;
+  color:#E8C96A;letter-spacing:1px;display:block;line-height:1;
+}
+.stat-lbl{font-size:10px;color:rgba(240,237,230,0.3);letter-spacing:2px;text-transform:uppercase;margin-top:4px;font-family:'Syne',sans-serif;}
+.stat-div{width:1px;height:40px;background:rgba(201,168,76,0.15);}
+
+/* Language cards */
+.lang-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  width:100%;
+  max-width:680px;
+}
+.lang-card{
+  position:relative;
+  background:rgba(255,255,255,0.03);
+  border-radius:20px;
+  padding:36px 28px;
+  border:1px solid rgba(255,255,255,0.07);
+  cursor:pointer;
+  text-decoration:none;
+  color:inherit;
+  overflow:hidden;
+  transition:transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s, border-color .3s;
+  display:flex;flex-direction:column;align-items:flex-start;
+}
+.lang-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(201,168,76,0.06),transparent);
+  opacity:0;transition:opacity .3s;
+}
+.lang-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(201,168,76,0.35);
+  box-shadow:0 24px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.1);
+}
+.lang-card:hover::before{opacity:1;}
+.lang-card.ky{border-color:rgba(82,183,136,0.2);}
+.lang-card.ky:hover{border-color:rgba(82,183,136,0.45);box-shadow:0 24px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(82,183,136,0.1);}
+
+/* Card top bar */
+.lang-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  opacity:0;transition:opacity .3s;
+}
+.lang-card.ru::after{background:linear-gradient(90deg,transparent,#C9A84C,#E8C96A,#C9A84C,transparent);}
+.lang-card.ky::after{background:linear-gradient(90deg,transparent,#52B788,transparent);}
+.lang-card:hover::after{opacity:1;}
+
+/* Flag */
+.flag{font-size:36px;margin-bottom:16px;display:block;}
+
+/* Lang label */
+.lang-name{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:28px;letter-spacing:2px;
+  margin-bottom:6px;
+}
+.lang-card.ru .lang-name{color:#E8C96A;}
+.lang-card.ky .lang-name{color:#52B788;}
+
+.lang-native{
+  font-family:'Playfair Display',serif;
+  font-size:14px;font-style:italic;
+  color:rgba(240,237,230,0.4);
+  margin-bottom:20px;
+}
+
+.lang-desc{
+  font-size:12px;color:rgba(240,237,230,0.45);
+  line-height:1.5;margin-bottom:24px;flex:1;
+  text-align:left;
+}
+
+.lang-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Syne',sans-serif;font-size:10px;
+  font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  padding:10px 20px;border-radius:8px;
+  transition:transform .2s;
+}
+.lang-card.ru .lang-btn{background:linear-gradient(135deg,#C9A84C,#A8860A);color:#08090C;}
+.lang-card.ky .lang-btn{background:linear-gradient(135deg,#2D6A4F,#52B788);color:#fff;}
+.lang-card:hover .lang-btn{transform:translateX(4px);}
+
+.arrow{font-size:14px;}
+
+/* Confidential footer */
+.footer{
+  margin-top:48px;
+  font-family:'Syne',sans-serif;font-size:9px;
+  letter-spacing:2px;text-transform:uppercase;
+  color:rgba(240,237,230,0.2);
+  display:flex;align-items:center;gap:16px;
+}
+.footer::before,.footer::after{content:'';flex:1;max-width:60px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.15),transparent);}
+
+/* Sewing needle decoration */
+.needle-wrap{margin-bottom:36px;}
+svg.needle{display:block;margin:0 auto;}
+
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes shimmer{0%,100%{opacity:.6}50%{opacity:1}}
+
+.logos{animation:fadeUp .6s .1s cubic-bezier(.22,1,.36,1) both;}
+.eyebrow{animation:fadeUp .6s .2s cubic-bezier(.22,1,.36,1) both;}
+.headline{animation:fadeUp .6s .3s cubic-bezier(.22,1,.36,1) both;}
+.sub{animation:fadeUp .6s .4s cubic-bezier(.22,1,.36,1) both;}
+.stats{animation:fadeUp .6s .5s cubic-bezier(.22,1,.36,1) both;}
+.lang-grid{animation:fadeUp .6s .6s cubic-bezier(.22,1,.36,1) both;}
+.footer{animation:fadeUp .6s .8s cubic-bezier(.22,1,.36,1) both;}
+
+/* Mobile */
+@media(max-width:600px){
+  body{overflow:auto;}
+  html,body{height:auto;}
+  .stitch{inset:8px;}
+  .lang-grid{grid-template-columns:1fr;max-width:380px;}
+  .stats{gap:20px;}
+  .stat-div{display:none;}
+  .logos{margin-bottom:36px;}
+  .sub{margin-bottom:36px;}
+  .stats{margin-bottom:44px;}
+  .lang-card{padding:28px 22px;}
+  .flag{font-size:28px;}
+}
+</style>
+</head>
+<body>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="stitch"></div>
+
+<div class="wrap">
+
+  <!-- Logos -->
+  <div class="logos">
+    <div class="chip chip-cg">CG</div>
+    <div class="chip-x">×</div>
+    <div class="chip chip-vos">OS</div>
+  </div>
+
+  <!-- Eyebrow -->
+  <div class="eyebrow">Конфиденциальное предложение · Март 2026</div>
+
+  <!-- Headline with sewing machine SVG -->
+  <div style="animation:fadeUp .6s .25s cubic-bezier(.22,1,.36,1) both;">
+    <svg style="display:block;margin:0 auto 20px;animation:float 6s ease-in-out infinite;" width="120" height="90" viewBox="0 0 120 90" fill="none">
+      <ellipse cx="60" cy="82" rx="42" ry="5" fill="rgba(201,168,76,0.1)"/>
+      <path d="M16 62 L16 34 Q16 28 22 28 L64 28 L64 62 Z" fill="#1E2530" stroke="rgba(201,168,76,0.3)" stroke-width="1.2"/>
+      <path d="M64 28 L64 14 Q64 10 68 10 L96 10 Q100 10 100 14 L100 38 Q100 42 96 43 L64 43" fill="#1E2530" stroke="rgba(201,168,76,0.3)" stroke-width="1.2"/>
+      <ellipse cx="87" cy="9" rx="8" ry="4.5" fill="#2D3748" stroke="rgba(201,168,76,0.5)" stroke-width="1"/>
+      <ellipse cx="87" cy="7" rx="5.5" ry="3" fill="rgba(201,168,76,0.7)"/>
+      <path d="M87 4 Q82 1 74 7 Q64 13 40 22 Q34 30 34 60" stroke="rgba(201,168,76,0.5)" stroke-width="1.2" fill="none" stroke-dasharray="3,3"/>
+      <rect x="30" y="56" width="9" height="8" rx="2" fill="#131720" stroke="rgba(201,168,76,0.3)" stroke-width=".8"/>
+      <rect x="33" y="50" width="2" height="12" rx="1" fill="rgba(201,168,76,0.9)"/>
+      <circle cx="22" cy="44" r="7" fill="#131720" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+      <circle cx="22" cy="44" r="3" fill="rgba(201,168,76,0.6)"/>
+      <circle cx="96" cy="40" r="10" fill="#131720" stroke="rgba(201,168,76,0.4)" stroke-width="1.5"/>
+      <circle cx="96" cy="40" r="3" fill="rgba(201,168,76,0.7)"/>
+      <line x1="96" y1="32" x2="96" y2="30" stroke="rgba(201,168,76,0.6)" stroke-width="1.5"/>
+      <line x1="96" y1="48" x2="96" y2="50" stroke="rgba(201,168,76,0.6)" stroke-width="1.5"/>
+      <rect x="16" y="62" width="90" height="6" rx="3" fill="#1A2030" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <div class="headline">
+    Операционная система<br>для <em>швейной индустрии</em>
+  </div>
+
+  <p class="sub">
+    Полная цифровизация — от B2B сделки до цеха и покупателя.
+    Три продукта. Один запуск. Пять месяцев.
+  </p>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-val">$67K</span>
+      <span class="stat-lbl">Инвестиция</span>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat">
+      <span class="stat-val">30%</span>
+      <span class="stat-lbl">Доля партнёра</span>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat">
+      <span class="stat-val">5 мес</span>
+      <span class="stat-lbl">До запуска</span>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat">
+      <span class="stat-val">$487K</span>
+      <span class="stat-lbl">SaaS · Год 1</span>
+    </div>
+  </div>
+
+  <!-- Language cards -->
+  <div class="lang-grid">
+
+    <a href="ru.html" class="lang-card ru">
+      <span class="flag">🇷🇺</span>
+      <div class="lang-name">РУССКИЙ</div>
+      <div class="lang-native">Russian</div>
+      <div class="lang-desc">Полное коммерческое предложение на русском языке. Все детали, ТЗ и финансовые модели.</div>
+      <div class="lang-btn">Открыть <span class="arrow">→</span></div>
+    </a>
+
+    <a href="ky.html" class="lang-card ky">
+      <span class="flag">🇰🇬</span>
+      <div class="lang-name">КЫРГЫЗЧА</div>
+      <div class="lang-native">Kyrgyz</div>
+      <div class="lang-desc">Толук коммерциялык сунуш кыргыз тилинде. Бардык деталдар, ТЗ жана финансылык моделдер.</div>
+      <div class="lang-btn">Ачуу <span class="arrow">→</span></div>
+    </a>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">Конфиденциально · Cool Group × Vertical OS · Март 2026</div>
+
+</div>
+
+</body>
+</html>
