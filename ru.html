@@ -381,175 +381,10 @@ footer .f-conf{font-size:10px;color:var(--text-dim);}
   .hero-meta{grid-template-columns:1fr 1fr;}
   .nav-links{display:none;}
 }
-
-/* ═══════════════════════════════════
-   MOBILE RESPONSIVE — injected
-═══════════════════════════════════ */
-
-/* Back home button */
-.back-home{
-  position:fixed;top:14px;left:16px;z-index:300;
-  background:rgba(8,9,12,0.85);backdrop-filter:blur(12px);
-  border:1px solid rgba(201,168,76,0.2);border-radius:8px;
-  padding:7px 12px;display:flex;align-items:center;gap:7px;
-  font-family:'Syne',sans-serif;font-size:9px;font-weight:700;
-  letter-spacing:1.5px;text-transform:uppercase;color:rgba(201,168,76,0.8);
-  text-decoration:none;transition:border-color .2s,color .2s;
-}
-.back-home:hover{border-color:rgba(201,168,76,0.5);color:var(--gold);}
-.back-home svg{flex-shrink:0;}
-
-/* Mobile nav */
-@media(max-width:768px){
-  .nav{padding:0 16px;height:52px;}
-  .nav-brand{font-size:11px;}
-  .nav-links{display:none;}
-  .nav-cta{font-size:9px;padding:7px 14px;}
-  .float-cta{bottom:16px;right:16px;padding:12px 18px;font-size:10px;border-radius:10px;}
-  .container{padding:0 18px;}
-  .sec{padding:64px 0;}
-  .sec-sm{padding:44px 0;}
-  .eyebrow{font-size:9px;letter-spacing:3px;}
-  
-  /* HERO */
-  .hero-grid{grid-template-columns:1fr;gap:36px;}
-  .hero-panel{display:none;}
-  .hero-meta{grid-template-columns:1fr 1fr;gap:10px;}
-  .meta-val{font-size:22px;}
-  .sim-badge{padding:6px 14px;}
-  .sim-text{font-size:9px;}
-  
-  /* REVOLUTION */
-  .rev-grid{grid-template-columns:1fr;gap:32px;}
-  .rev-number{font-size:80px;}
-  
-  /* PROOF */
-  .proof-grid,
-  div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
-  
-  /* PRODUCTS */
-  .products-hero{grid-template-columns:1fr !important;}
-  .prod-featured{grid-column:1 !important;display:flex;flex-direction:column;gap:20px;}
-  .tier-grid{grid-template-columns:1fr 1fr;}
-  .total-row{flex-direction:column;gap:8px;text-align:center;}
-  .total-row .num{font-size:36px;}
-  
-  /* GANTT — horizontal scroll */
-  .gantt{overflow-x:auto;-webkit-overflow-scrolling:touch;}
-  .gantt-months,.gantt-row{
-    grid-template-columns:120px repeat(5,90px) !important;
-    min-width:570px;
-  }
-  .gantt-label{font-size:10px;padding-right:10px;}
-  .gantt-bar{font-size:8px;padding:0 8px;}
-  
-  /* PRODUCT SECTIONS */
-  .ps-header{grid-template-columns:1fr !important;gap:20px;}
-  .ps-price{text-align:left;}
-  .feat-grid{grid-template-columns:1fr !important;}
-  
-  /* KANBAN — horizontal scroll */
-  .kanban-demo{
-    overflow-x:auto;-webkit-overflow-scrolling:touch;
-    grid-template-columns:repeat(5,140px) !important;
-    padding-bottom:8px;
-  }
-  
-  /* PAYMENT */
-  .payment-grid{grid-template-columns:1fr 1fr;gap:10px;}
-  .pay-n{font-size:40px;}
-  .pay-amount{font-size:28px;}
-  .guar-grid{grid-template-columns:1fr 1fr;}
-  
-  /* SAAS TIERS */
-  div[style*="grid-template-columns:repeat(4,1fr)"].saas-tiers,
-  .saas-tier-grid{grid-template-columns:1fr 1fr !important;}
-  
-  /* REVENUE TABLE — horizontal scroll */
-  .rev-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
-  .rev-hero{flex-direction:column;gap:20px;padding:22px 18px;}
-  .rev-big{font-size:60px;}
-  .rev-bars{display:none;}
-  
-  /* REQ TABLES — horizontal scroll */
-  .req-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:11px;}
-  .req-table th,.req-table td{white-space:normal;min-width:100px;}
-  
-  /* EQUITY */
-  .eq-layout{grid-template-columns:1fr !important;gap:32px;}
-  .pie-wrap{width:200px;height:200px;margin:0 auto;}
-  .pie-wrap svg{width:200px;height:200px;}
-  
-  /* WHY */
-  .why-grid{grid-template-columns:1fr !important;}
-  .comp-table .row{grid-template-columns:1fr !important;}
-  .comp-table .col:nth-child(2){border-left:none;border-top:1px solid rgba(255,255,255,0.04);}
-  
-  /* TEAM */
-  .team-grid{grid-template-columns:1fr 1fr !important;}
-  
-  /* STEPS */
-  .steps-grid{grid-template-columns:1fr !important;}
-  
-  /* CTA BANNER */
-  .cta-banner{flex-direction:column;gap:24px;padding:24px 20px;}
-  .cta-banner h3{font-size:20px;}
-  .cta-right{align-items:flex-start;}
-  .btn-primary{width:100%;text-align:center;justify-content:center;}
-  
-  /* PRD toggles */
-  .prd-toggle{font-size:9px;padding:12px 14px;text-align:left;}
-  
-  /* MARKET GRID */
-  .mkt-grid{grid-template-columns:1fr !important;}
-  
-  /* ROI SECTION */
-  .pain-grid{grid-template-columns:1fr !important;}
-  .roi-transform{grid-template-columns:1fr !important;}
-  .roi-arrow{flex-direction:row;justify-content:center;}
-  .roi-calc{grid-template-columns:1fr 1fr;}
-  .use-cases{grid-template-columns:1fr !important;}
-  
-  /* Hide arrow on mobile */
-  .roi-arrow span{display:none;}
-  
-  /* General inline grids override */
-  div[style*="display:grid;grid-template-columns:1fr 1fr"]{
-    grid-template-columns:1fr !important;
-  }
-  div[style*="display:grid;grid-template-columns:repeat(3"]{
-    grid-template-columns:1fr 1fr !important;
-  }
-  div[style*="display:grid;grid-template-columns:repeat(4"]{
-    grid-template-columns:1fr 1fr !important;
-  }
-  
-  /* Inline grids with 3-col for bottom stat rows */
-  .tech-stack-row > div{
-    grid-template-columns:1fr !important;
-  }
-}
-
-@media(max-width:420px){
-  .hero-meta{grid-template-columns:1fr 1fr;}
-  .meta-val{font-size:18px;}
-  .payment-grid{grid-template-columns:1fr !important;}
-  .guar-grid{grid-template-columns:1fr 1fr;}
-  .roi-calc{grid-template-columns:1fr !important;}
-  .tier-grid{grid-template-columns:1fr !important;}
-  .team-grid{grid-template-columns:1fr !important;}
-}
-
 </style>
 </head>
 <body>
 
-<a href="index.html" class="back-home">
-  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-    <path d="M7 2L3 6L7 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-  На главную
-</a>
 <nav class="nav">
   <div class="nav-brand">CG × VOS · 2026</div>
   <div class="nav-links">
@@ -591,7 +426,7 @@ footer .f-conf{font-size:10px;color:var(--text-dim);}
         <div class="hero-meta">
           <div class="meta-card"><div class="meta-lbl">Инвестиция в ПО</div><div class="meta-val">$67K</div></div>
           <div class="meta-card"><div class="meta-lbl">Доля сооснователя</div><div class="meta-val">30%</div></div>
-          <div class="meta-card"><div class="meta-lbl">SaaS · год 1</div><div class="meta-val">$315K</div></div>
+          <div class="meta-card"><div class="meta-lbl">SaaS · год 1</div><div class="meta-val">$431K</div></div>
           <div class="meta-card"><div class="meta-lbl">Параллельный запуск</div><div class="meta-val">5 мес</div></div>
         </div>
       </div>
@@ -758,7 +593,7 @@ footer .f-conf{font-size:10px;color:var(--text-dim);}
         <div class="pain-icon">📋</div>
         <div class="pain-title">200 часов/неделю — на планирование в Excel</div>
         <div class="pain-desc">5 полноценных рабочих сотрудников тратят всё своё время на таблицы, которые устаревают к утру следующего дня. Решения принимаются по данным, которые уже неверны.</div>
-        <span class="pain-cost">~$52,000 / год только в зарплатах</span>
+        <span class="pain-cost">~$62,000 / год только в зарплатах</span>
       </div>
       <div class="pain-card">
         <div class="pain-icon">📱</div>
@@ -826,16 +661,16 @@ footer .f-conf{font-size:10px;color:var(--text-dim);}
     <div style="margin-top:44px;">
       <div class="eyebrow">Финансовое обоснование</div>
       <div class="h2" style="margin-bottom:24px;">$67,000 окупается <em>в первый же год.</em></div>
-      <div class="roi-calc" style="display:grid;">
+      <div class="roi-calc">
         <div class="roi-num-card">
           <div class="rn-lbl">Стоимость 200 ч/нед. планирования</div>
-          <div class="rn-val" style="color:#E07070;">$52K</div>
-          <div class="rn-sub">в год только в зарплатах координаторов (ср. $5/ч × 200ч × 52 нед)</div>
+          <div class="rn-val" style="color:#E07070;">$62K</div>
+          <div class="rn-sub">в год только в зарплатах координаторов (ср. $6/ч × 200ч × 52 нед — средняя ставка офис-менеджера в Бишкеке)</div>
         </div>
         <div class="roi-num-card">
           <div class="rn-lbl">Потери от 1 потерянного B2B в месяц</div>
           <div class="rn-val" style="color:#E07070;">$60K+</div>
-          <div class="rn-sub">в год от упущенных заказов из-за неструктурированной воронки</div>
+          <div class="rn-sub">в год (1 потерянный заказ/мес × $5,000 avg — консервативная оценка по данным CEO)</div>
         </div>
         <div class="roi-num-card">
           <div class="rn-lbl">Рост выручки Toolor при retention +15%</div>
@@ -1617,7 +1452,7 @@ footer .f-conf{font-size:10px;color:var(--text-dim);}
     <p class="body" style="max-width:640px;margin-top:14px;">Один работающий пример в Cool Group — лучший продающий аргумент. Только КГ + УЗ: 2,500+ фабрик и тысячи локальных брендов без специализированного ПО. Не один размер для всех — четыре уровня входа, от маленького ателье до холдинга.</p>
 
     <!-- TIER CARDS -->
-    <div class="saas-tier-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px;">
 
       <!-- Tier 1: Starter -->
       <div style="background:var(--dark3);border-radius:16px;padding:22px 18px;border:1px solid rgba(255,255,255,0.06);position:relative;overflow:hidden;">
@@ -1678,7 +1513,7 @@ footer .f-conf{font-size:10px;color:var(--text-dim);}
     <div class="rev-hero">
       <div>
         <div class="rev-lbl">Консервативная цель · Год 1</div>
-        <div class="rev-big"><sub>$</sub>487K</div>
+        <div class="rev-big"><sub>$</sub>431K</div>
       </div>
       <div style="width:1px;height:70px;background:rgba(201,168,76,0.2);"></div>
       <div class="rev-desc">Смешанный портфель: подписки малого и среднего бизнеса дают стабильный MRR; Professional и Enterprise — крупные чеки. Масштабируется без пропорционального роста затрат.</div>
